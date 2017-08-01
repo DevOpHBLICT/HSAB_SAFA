@@ -17,6 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)definition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)display.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)info_2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocalHtmlBaseUrl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

@@ -140,20 +140,59 @@ namespace HSAB.SAFA
 
             }
 
-var ss=@"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = 'Arrow1.png' /> Making safeguarding personal is a shift in culture and professional practice.< br style = 'clear: both;' /> </ p >";
- ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = 'Arrow2.png' />It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety. < br style = 'clear: both;' />  </ p >";
-   ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = 'Arrow3.png' />It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process. < br style = 'clear: both;' /></ p >";
- ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = 'Arrow4.png' />The alerter must note the person's wishes but still has a duty to raise any safeguarding concerns that are disclosed, witnessed or suspected to the Local Authority. < br style = 'clear: both;' /></ p >";
+            var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
+            var htmlSource = new HtmlWebViewSource();
+            /*
+htmlSource.Html = @"<html> 
+ <head> 
+ <link rel=""stylesheet"" href=""default.css""> 
+ </head> 
+ <body> 
+ <h1>Xamarin.Forms</h1> 
+ <p>The CSS and image are loaded from local files!</p> 
+ <img src='XamarinLogo.png'/> 
+ <p><a href=""local.html"">next page</a></p> 
+ </body> 
+ </html>";
+            */
 
-            var web = new WebView();
-            var html = new HtmlWebViewSource
-            {
-                Html = ss
-            };
+            htmlSource.Html = @"<html> 
+ <head> 
+ <link rel=""stylesheet"" href=""default.css""> 
+ </head> 
+ <body> 
+<table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td> Making safeguarding personal is a shift in culture and professional practice. </td></tr> 
+<table><tr><td style='vertical-align:top;margin-top:8px' > <div id='triangle-right'></div><td><td>It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety.  </td></tr>
+<table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td>It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process. </td></tr>
+<table><tr><td style='vertical-align:top;margin-top:8px' > <div id='triangle-right'></div><td><td>The alerter must note the person's wishes but still has a duty to raise any safeguarding concerns that are disclosed, witnessed or suspected to the Local Authority.  </td></tr></table>
+
+ </ body> 
+ </html>";
 
 
-            web.Source = html;
-            Content = web;
+            htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
+          browser.Source = htmlSource;
+
+
+
+            Content = browser;
+
+
+/*
+var ss =@"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = '~/Arrow1.png' /> Making safeguarding personal is a shift in culture and professional practice. </ p >";
+ ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = '~/Arrow2.png' />It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety. ";
+   ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = '~/Arrow3.png' />It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process.</ p >";
+ ss=ss+"<p><img style = 'float: left; margin: 5px 15px 15px 0px;' src = '~/Arrow4.png' />The alerter must note the person's wishes but still has a duty to raise any safeguarding concerns that are disclosed, witnessed or suspected to the Local Authority. </ p >";
+ */
+         //   var web = new WebView();
+         //   var html = new HtmlWebViewSource
+         //   {
+         //       Html = ss
+         //   };
+
+
+         //   web.Source = html;
+           // Content = web;
 
 
         }

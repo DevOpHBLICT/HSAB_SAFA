@@ -1,0 +1,17 @@
+﻿html, body {
+    margin: 0;
+    padding: 10px
+}
+
+body, p, h1 {
+    font-family: 'Roboto';
+}
+
+#triangle-right {
+   
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 13px solid #7e4f6a;
+    border-bottom: 8px solid transparent;
+}

@@ -24,7 +24,7 @@ namespace HSAB.SAFA
             NavPage = new NavigationPage(new Contents());
             if (Device.OS != TargetPlatform.Windows)
             {
-               NavPage.BarBackgroundColor = Color.FromHex("#C0504D");
+               NavPage.BarBackgroundColor = Color.FromHex("923b3d");
                 NavPage.BarTextColor = Color.White;
                 NavPage.ToolbarItems.Add(new ToolbarItem
                 {

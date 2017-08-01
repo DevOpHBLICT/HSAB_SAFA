@@ -61,7 +61,7 @@ namespace HSAB.SAFA
         public definition(string startpage, String Titles, String BGColor)
         {
             Title = "Definition of an adult at risk";
-            Label l = new Label { Text = "According to The Care Act (2014), an adult at risk is a person who:" };
+            Label l = new Label { Text = "\r\n According to The Care Act (2014), an adult at risk is a person who:" };
             Image logo = 
           new Image {
                                 
@@ -71,7 +71,7 @@ namespace HSAB.SAFA
                            HeightRequest=30,
                         //   WidthRequest=90,
                    //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-                            Source =ImageSource.FromFile( "down.jpg" )
+                            Source =ImageSource.FromFile( "down.png" )
             
                 
             };

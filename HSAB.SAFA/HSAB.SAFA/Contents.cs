@@ -90,7 +90,7 @@ namespace HSAB.SAFA
             App.app_title = "HSAB SAFA Prompts";
             Title = "HSAB SAFA Prompts";
             BackgroundColor = Color.FromHex("FCDED4");
-
+            
             Label title = null;
 
             //  BackgroundColor = Color.FromHex("#e6b9b8");
@@ -124,8 +124,8 @@ namespace HSAB.SAFA
             };
             _pharmacylist.ItemsSource = data;
             var cell = new DataTemplate(typeof(ImageCell));
-            cell.SetValue(TextCell.TextColorProperty, Color.FromHex("1760ae"));
-            //  cell.SetValue(TextCell.TextProperty, );
+            cell.SetValue(TextCell.TextColorProperty, Color.FromHex("a50100"));
+          
 
             cell.SetBinding(TextCell.TextProperty, "Name");
             cell.SetBinding(ImageCell.ImageSourceProperty, "Image");
