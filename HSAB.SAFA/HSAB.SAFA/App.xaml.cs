@@ -24,7 +24,9 @@ namespace HSAB.SAFA
             NavPage = new NavigationPage(new Contents());
             if (Device.OS != TargetPlatform.Windows)
             {
-               NavPage.BarBackgroundColor = Color.FromHex("923b3d");
+                
+
+                NavPage.BarBackgroundColor = Color.FromHex("923b3d");
                 NavPage.BarTextColor = Color.White;
                 NavPage.ToolbarItems.Add(new ToolbarItem
                 {
@@ -44,6 +46,7 @@ namespace HSAB.SAFA
                     //    Command = new Command(() => nav.PushAsync(new Contents(database))),
                     Command = new Command(() =>
 
+                    
                        App.NavPage.PushAsync(new info_2(app_title))
                 )
                 });

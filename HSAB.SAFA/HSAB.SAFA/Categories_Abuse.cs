@@ -148,6 +148,8 @@ namespace HSAB.SAFA
             Button Neglect_Abuse = new Button { Text = "Neglect and acts of omission", BackgroundColor = Color.FromHex("#FF5050"), TextColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
             Button Self_Neglect = new Button { Text = "Self-neglect", BackgroundColor = Color.FromHex("#731351"), TextColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
 
+
+          
             var grid = new Grid
             {
                 Padding=10,

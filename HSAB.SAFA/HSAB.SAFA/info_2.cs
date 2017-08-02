@@ -30,11 +30,15 @@ namespace HSAB.SAFA
         {
             BackgroundColor = Color.White;
 
+            var name = this.GetType().Name;
 
-
+            var kl = Application.Current.MainPage.Navigation.NavigationStack.Count;
+            var i = App.NavPage.Title;
+            var k = Title;
+          
             Title = info;
-         
-            
+            if (kl == 1) { Title = "HSAB SAFA Prompts"; info = Title; }
+
             // Label title = null;
             Button home = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)), IsVisible = true, Text = "home", TextColor = Color.Black };
             home.IsVisible = false;
