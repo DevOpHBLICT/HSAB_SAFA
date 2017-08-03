@@ -7,6 +7,9 @@ body, p, h1 {
     font-family: 'Roboto';
 }
 
+h3 {
+  color:  #7e4f6a;
+}
 #triangle-right {
    
     width: 0;

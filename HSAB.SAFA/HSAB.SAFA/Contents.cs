@@ -182,7 +182,7 @@ namespace HSAB.SAFA
                            //     BackgroundColor =Color.White,
                                   VerticalOptions = LayoutOptions.CenterAndExpand,
                            HorizontalOptions = LayoutOptions.CenterAndExpand,
-                          HeightRequest=30,
+                          HeightRequest=70,
                         //   WidthRequest=90,
                    //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
                             Source =ImageSource.FromFile( "HSAB.png" )

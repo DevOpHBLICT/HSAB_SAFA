@@ -11,7 +11,7 @@ namespace HSAB.SAFA
 
 
 
-    public class info_2 : CarouselPage
+    public class info_2 : ContentPage
     {
         string s = "";
         string a = "";
@@ -20,7 +20,7 @@ namespace HSAB.SAFA
         string d = "";
         string e = "";
 
-       
+
         void BackButtonClicked(object sender, EventArgs e)
         {
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PopAsync());
@@ -30,21 +30,14 @@ namespace HSAB.SAFA
         {
             BackgroundColor = Color.White;
 
-            var name = this.GetType().Name;
-
-            var kl = Application.Current.MainPage.Navigation.NavigationStack.Count;
-            var i = App.NavPage.Title;
-            var k = Title;
-          
-            Title = info;
-            if (kl == 1) { Title = "HSAB SAFA Prompts"; info = Title; }
-
+              Title = "More Information";
+       
             // Label title = null;
             Button home = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)), IsVisible = true, Text = "home", TextColor = Color.Black };
             home.IsVisible = false;
             if (Device.OS == TargetPlatform.Windows)
             {
-                   Button back = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)), IsVisible = true, Image = "back" };
+                Button back = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)), IsVisible = true, Image = "back" };
                 Button next = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)), IsVisible = true, Text = "next", TextColor = Color.Black };
                 back.Image = (FileImageSource)ImageSource.FromFile("back.png");
                 back.HorizontalOptions = LayoutOptions.End;
@@ -60,113 +53,111 @@ namespace HSAB.SAFA
 
             Label LItalic = new Label
             {
-             //    HorizontalTextAlignment = TextAlignment.Center,
+                //    HorizontalTextAlignment = TextAlignment.Center,
 
             };
 
             var fs = new FormattedString();
-        
+
             fs.Spans.Add(new Span { ForegroundColor = Color.Black, FontSize = 14, FontAttributes = FontAttributes.Italic, Text = "'The requirement for continuous / complete supervision and control cannot and should not be interpreted as requiring 24 hour monitoring and/or that the person is to be physically accompanied over a continuous 24 hour period. In other words, if the individual is subject to such monitoring or such degree of accompaniment, then the necessary degree of continuity or completeness will be satisfied. But it is capable of being satisfied even if the supervision and control is 'lighter touch'" });
-            
+
+            var Str = "";
+
+            var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
+            var htmlSource = new HtmlWebViewSource();
 
 
 
-            Label title2 = new Label
-            {
-                Text = "Additional information",
-                HorizontalTextAlignment = TextAlignment.Center,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            title2.TextColor = Color.FromHex("#953735");
-            Label l1 = new Label
-            {
-                InputTransparent = true,
-                HorizontalTextAlignment = TextAlignment.Start,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            l1.TextColor = Color.Black;
-            l1.IsEnabled = true;
-
-            Label l2 = new Label
-            {
-                InputTransparent = true,
-                HorizontalTextAlignment = TextAlignment.Start,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            l2.TextColor = Color.Black;
-            l2.IsEnabled = true;
-
-            Label l3 = new Label
-            {
-                InputTransparent = true,
-                HorizontalTextAlignment = TextAlignment.Start,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            l3.TextColor = Color.Black;
-            l3.IsEnabled = true;
-
-            Label l4 = new Label
-            {
-                InputTransparent = true,
-                HorizontalTextAlignment = TextAlignment.Start,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            l4.TextColor = Color.Black;
-            l4.IsEnabled = true;
-            Label l5 = new Label
-            {
-                InputTransparent = true,
-                HorizontalTextAlignment = TextAlignment.Start,
-                Font = Font.SystemFontOfSize(14)
-
-            };
-            l5.TextColor = Color.Black;
-            l5.IsEnabled = true;
             if (info == "HSAB SAFA Prompts")
             {
-               
-                a = "Copyright HSAB and HBL ICT Services \r\n\r\n The following staff developed this app: \r\n\r\n Tracy Cooper \r\n Jane Newcombe \r\n Neil Wallace \r\n Michael Lamb \r\n Caroline Raut \r\n\r\n The responsible officers for this app are: \r\n Caroline.Aitken@hertfordshire.gov.uk or Loraine.Waterworh@hertfordshire.gov.uk";
-                l1.Text = a;
-            }
+                htmlSource.Html = @"<html> 
+ <head> 
+<style>
+textblock
+{
+padding:5px;5px;5px;5px;
+}
+#id
+{
+color:#923b3d !important;
+}
+b{
+color:#923b3d !important;
+}
+pre{overflow:auto; max-width:100%}
+</style>
+<meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
+                 </head> 
+ <body> 
+<textblock><b id='bb'>Additional Information</b>  <p>        Copyright <b id='bb'>HSAB and HBL ICT Services</b>. The following staff developed this app:<center> <br/><br/>Tracy Cooper <br/> Jane Newcombe <br/> Neil Wallace <br/> Michael Lamb <br/> Caroline Raut <br/><br/><p> </center> The responsible officers for this app are: <p> Caroline.Aitken@hertfordshire.gov.uk or Loraine.Waterworth@hertfordshire.gov.uk
+   
+</textblock>
+</body>
+</html>";
+
+
+
+              }
+         
+
 
             if (info == "Definition of an Adult at Risk")
             {
+                htmlSource.Html = @"<html> 
+ <head> 
+<style>
+textblock
+{
+padding:5px;5px;5px;5px;
+}
+#id
+{
+color:#923b3d !important;
+}
+b{
+color:#923b3d !important;
+}
+pre{overflow:auto; max-width:100%}
+</style>
+<meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
+                 </head> 
+ <body> 
+<p><h2 id='bb'>Definition of an Adult at Risk</p></h2>
+<p><textblock><b id='bb'><br.>The Care Act (2014)</b><br/>
+<p>Implemented in April 2015 and the biggest change to social care policy in the last 30 years. Safeguarding duties apply to an adult who:
+<br/><p>• Has needs for care and support(whether or not the local authority is meeting any of those needs.
+<br/><p>• Is experiencing, or at risk of, abuse or neglect; <b id='bb'>and</b>
+<br/><p>• As a result of the those care and support needs is unable to protect themselves from the risk of, or the experience of abuse or neglect.
+
+<p> ‘The local authority must make(or cause to be made) whatever enquiries it thinks necessary to enable it to decide whether any action should be taken in the adult’s case (whether under this Part or otherwise) and, if so, what and by whom.’ (Care Act 2014: Section 42)
+
+<p>Six key principles underpin all adult safeguarding work:
+
+<br/><p><b id ='bb'>Empowerment:</b> People being supported and encouraged to make their own decisions and give informed consent.
+
+<br/><p><b id='bb'>Prevention:</b> It is better to take action before harm occurs.
+
+<br><p><b id='bb'>Proportionality:</b> The least intrusive response appropriate to the risk presented.
+
+<br><p><b id='bb'>Protection:</b> Support and representation for those in greatest need.
+
+<br><p><b id='bb'>Partnership:</b> Local solutions through services working with their communities.Communities have a part to play in preventing, detecting and reporting neglect and abuse.
+
+<br><p><b id='bb'>Accountability:</b> Accountability and transparency in delivering safeguarding.
+
+<p>If a Safeguarding enquiry is not pursued by the relevant agency, there may be an individual case review for the person to reassess the care package and support, to ensure it is appropriate and meeting the individual’s needs.
+<p><b id='bb'>Hertfordshire Safeguarding Adults Board(HSAB)</b>
+<p>Under the Care Act 2014 there is a legal obligation to have a local Safeguarding Adults Board.This is a multi-agency partnership where all agencies in Hertfordshire with a responsibility to safeguard adults at risk meet to coordinate activity and promote wellbeing.
+<p>The <b id='bb'>HSAB</b> are central to the development interagency policies, scrutinise safeguarding work of the individual agencies and challenge current practices.
+<p>The <b id='bb'>HSAB</b> can also commission Safeguarding Adult Reviews(SARs) which look in detail into cases where there has been a death or serious harm to an adult at risk and scrutinise how individual agencies dealt with the risks and concerns.From this the HSAB can make recommendations to change in practice and procedures in the organisations involved.
+</textblock>
+</body>
+</html>";
 
 
-                a = "Implemented in April 2015 and the biggest change to social care policy in the last 30 years.Safeguarding duties apply to an adult who:";
-                a = a + "• Has needs for care and support(whether or not the local authority is meeting any of those needs";
-                a = a + "• Is experiencing, or at risk of, abuse or neglect; and";
-                a = a + "• As a result of the those care and support needs is unable to protect themselves from the risk of, or the experience of abuse or neglect";
-                a = a + "‘The local authority must make(or cause to be made) whatever enquiries it thinks necessary to enable it to decide whether any action should be taken in the adult’s case (whether under this Part or otherwise)";
-                a = a + "and, if so, what and by whom.’ (Care Act 2014: Section 42)";
-                a = a + "Six key principles underpin all adult safeguarding work";
-                a = a + "Empowerment: People being supported and encouraged to make their own decisions and give informed consent.";
-                a = a + "Prevention: It is better to take action before harm occurs.";
-                a = a + "Proportionality: The least intrusive response appropriate to the risk presented.";
-                a = a + "Protection: Support and representation for those in greatest need.";
-                a = a + "Partnership: Local solutions through services working with their communities.Communities have a part to play in preventing, detecting and reporting neglect and abuse.";
-                a = a + "Accountability: Accountability and transparency in delivering safeguarding.";
-                a = a + "If a Safeguarding enquiry is not pursued by the relevant agency, there may be an individual case review for the person to reassess the care package and support, to ensure it is appropriate and meeting the individual’s needs.";
-                a = a + "Hertfordshire Safeguarding Adults Board(HSAB)";
-                a = a + "Under the Care Act 2014 there is a legal obligation to have a local Safeguarding Adults Board.This is a multi - agency partnership where all agencies in Hertfordshire with a responsibility to safeguard adults at risk meet to coordinate activity and promote wellbeing.";
-                a = a + "The HSAB are central to the development interagency policies, scrutinise safeguarding work of the individual agencies and challenge current practices.";
-                a = a + "The HSAB can also commission Safeguarding Adult Reviews(SARs) which look in detail into cases where there has been a death or serious harm to an adult at risk and scrutinise how individual agencies dealt with the risks and concerns.From this the HSAB can make recommendations to change in practice and procedures in the organisations involved.";
 
 
 
-
-
-
-                l1.Text = a;
-//                l2.Text = b;
-//                l3.Text = c;
-  //              l4.Text = d;
-               
 
             }
             if (info == "What is Safeguarding?")
@@ -186,11 +177,8 @@ namespace HSAB.SAFA
                 a = a + "·       Unexplained loss/ misplacement of financial documents";
                 a = a + "·       The recent addition of authorised signers on a client or donor’s signature card";
                 a = a + "·       Sudden or unexplained changes in a will or other financial documents";
-               
-                l1.Text = a;
-                l2.Text = b;
-                l3.Text = c;
-                
+
+
 
             }
             if (info == "Recognising abuse")
@@ -204,7 +192,6 @@ namespace HSAB.SAFA
                 a = a + "·       Support adults to think and weigh up the risks and benefits of different options when exercising choice and control";
 
 
-                l1.Text = a;
 
             }
 
@@ -228,187 +215,35 @@ namespace HSAB.SAFA
                 a = a + "6.Email or fax the concern form to the relevant agency";
 
 
-               s = "\u2022The Deprivation of Liberty Safeguards (DOLS)provides legal protection for people who are, or may become, deprived of their liberty(as described in Article 5 of the European Convention on Human Rights ECHR) in a hospital or care home.\r\n";
+                s = "\u2022The Deprivation of Liberty Safeguards (DOLS)provides legal protection for people who are, or may become, deprived of their liberty(as described in Article 5 of the European Convention on Human Rights ECHR) in a hospital or care home.\r\n";
                 s = s + "\u2022DOLS legislation applies to people aged 18 years or over.\r\n";
                 s = s + "DOLS does not apply to a person detained under the Mental Health Act\r\n";
                 s = s + "\u2022The person’s capacity must be assessed in relation to the decision about accommodation in a care home or hospital for the purpose of providing care or treatment.\r\n\r\n";
                 s = s + "\u2022The Best Interests Assessor(BIA) must satisfy themselves that person has a valid need to be detained in the proposed care setting, that it is in the persons best interests to be detained in that setting and determine whether any harm could arise if the DOLS is not authorised or if there are any less restrictive care options which could avoid DOLS.\r\n\r\n";
                 s = s + "\u2022With regards specifically to the continuous supervision and control element of the acid test, please note the Law Society guidance as follows: ";
-            
-                    
-                    l1.Text = s;
+
+
+
                 LItalic.FormattedText = fs;
 
-                
-            }
-          
 
-            var S = new StackLayout
-            {
-                Spacing = 5,
-                HorizontalOptions = LayoutOptions.Center,
-                Orientation = StackOrientation.Horizontal,
-                Children =
-                        {            
-                            home,
-                   
-                        }
-            };
-
-
-            
-
-            var first_page = new ContentPage
-            {
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-
-                        Padding = new Thickness(5, 5, 5, 5),
-                        Children = {
-                //        new Label { Text = info,
-        //                TextColor = Color.FromHex("#953735"),
-        //    XAlign = TextAlignment.Center,
-        //        Font = Font.SystemFontOfSize(18)},
-                new Label
-                 {
-                  Text = "Additional information",
-                  TextColor = Color.FromHex("#953735"),
-                  XAlign = TextAlignment.Center,
-                  Font = Font.SystemFontOfSize(14)
-                 },
-                 l1,LItalic
-                },
-                    }
-                }
-            };
-
-            var second_page = new ContentPage
-            {
-
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Padding = new Thickness(5, 5, 5, 5),
-                        Children = {
-
-                new Label
-                 {
-                  Text = "Additional information",
-                  TextColor = Color.FromHex("#953735"),
-                  XAlign = TextAlignment.Center,
-                  Font = Font.SystemFontOfSize(14)
-                 },
-                    l2 ,
-
-                    }
-                    }
-                }
-            };
-            var third_page = new ContentPage
-            {
-
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Padding = new Thickness(5, 5, 5, 5),
-                        Children = {
-                new Label
-                 {
-                  Text = "Additional information",
-                  TextColor = Color.FromHex("#953735"),
-                  XAlign = TextAlignment.Center,
-                  Font = Font.SystemFontOfSize(14)
-                 },
-                    l3,
-
-
-                    }
-                    }
-                }
-            };
-            var forth_page = new ContentPage
-            {
-
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Padding = new Thickness(5, 5, 5, 5),
-                        Children = {
-                    new Label
-                 {
-                  Text = "Additional information",
-                  TextColor = Color.FromHex("#953735"),
-                  XAlign = TextAlignment.Center,
-                  Font = Font.SystemFontOfSize(14)
-                 },
-                    l4,
-
-
-                    }
-                    }
-                }
-            };
-
-            var fifth_page = new ContentPage
-            {
-                Padding = new Thickness(5, 5, 5, 5),
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Children = {
-                 new Label
-                 {
-                  Text = "Additional information",
-                  TextColor = Color.FromHex("#953735"),
-                  XAlign = TextAlignment.Center,
-                  Font = Font.SystemFontOfSize(16)
-                 },
-                    l5 ,
-
-
-
-                    }
-                    }
-                }
-            };
-
-            if (info == "Assessing Capacity Prompts")
-            {
-                Children.Add(first_page);
-               Children.Add(second_page);
-              Children.Add(third_page);
-               Children.Add(forth_page);
-          
-            }
-            if (info == "Best Interests Decision")
-            {
-                Children.Add(first_page);
-                Children.Add(second_page);
-                Children.Add(third_page);
-              
-               
             }
 
-            if ((info == "Recognising abuse" ) || (info == "Definition of an Adult at Risk") || (info == "What is Safeguarding?") || (info == "HSAB SAFA Prompts") || (info == "Reporting a Concern") || (info == "Categories of Abuse")) 
-            {
-                //comment
-                Children.Add(first_page);
-            }
+
+            htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
+            browser.Source = htmlSource;
+
+
+
+            Content = browser;
 
 
 
         }
-     
 
-}
-    
-    
+
+
+    }
 }
 
 
