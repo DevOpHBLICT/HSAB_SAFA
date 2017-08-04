@@ -23,7 +23,8 @@ namespace HSAB.SAFA
 
         void OnyesButtonClicked(object sender, EventArgs e)
         {
-            var tg = new Recognizing_Abuse2();
+            App.app_title = "Reporting a concern";
+            var tg = new d("17", "Reporting a concern", "#bfbfbf");
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
         }
 
@@ -182,8 +183,8 @@ namespace HSAB.SAFA
 
             var grid = new Grid
             {
-                Padding = 10,
-                RowSpacing = 10
+                Padding = 3,
+                RowSpacing = 3
             };
 
             Label Risk_Label = new Label {TextColor=Color.Black, Text = "They may not take as much care as normal with their appearance, such as not bathing, shaving or washing their hair." };
@@ -215,9 +216,10 @@ namespace HSAB.SAFA
        
 
 
-            Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "Next", IsVisible = false, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
+            Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "Suspected", IsVisible = true, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
+            yes.Clicked += OnyesButtonClicked;
 
-            yes.HeightRequest = 20;
+            yes.HeightRequest = 70;
 
             //    grid.Children.Add(fi, 0, 1,0,1); // Left, Second element 
             //       grid.Children.Add(freq, 1, 2,1,1); // Right, Second element 
@@ -227,7 +229,7 @@ namespace HSAB.SAFA
 
             */
             Content = new StackLayout {
-               Children = {yes, grid }
+               Children = { grid,yes }
             };
 
 
@@ -235,60 +237,7 @@ namespace HSAB.SAFA
 
 
 
-            _pharmacylist.ItemSelected += (sender, e) =>
-            {
-
-
-                if (e.SelectedItem == null) return;
-                var user = (GetFrontPage2)e.SelectedItem;
-                if (user.Name == "Definition of an Adult at Risk")
-                {
-                    App.app_title = "Definition of an Adult at Risk";
-                    var tg = new definition("1", "Definition of an Adult at Risk", "#953735");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "What is Safeguarding?")
-                {
-                    App.app_title = "What is Safeguarding?";
-                    var tg = new What_Is_Safeguarding(App.app_title);
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-
-                }
-                if (user.Name == "Categories of Abuse")
-                {
-                    App.app_title = "Categories of Abuse";
-                    var tg = new Categories_Abuse();
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "Recognizing Abuse")
-                {
-                    App.app_title = "Safeguarding Adults from Abuse (SAFA)";
-                    var tg = new d("14", "safeguarding Adults from Abuse (SAFA)", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-
-
-                if (user.Name == "Reporting a Concern")
-                {
-                    App.app_title = "Reporting a concern";
-                    var tg = new d("17", "Reporting a concern", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "Making Safeguarding Personal")
-                {
-                    App.app_title = "Making Safeguarding Personal";
-                    var tg = new d("21", "Making safeguarding personal", "#bfbfbf");
-
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-
-
-
-                if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
-                                                    // do something with e.SelectedItem
-                ((ListView)sender).SelectedItem = null; // de-select the row
-
-            };
+       
         }
     }
 }

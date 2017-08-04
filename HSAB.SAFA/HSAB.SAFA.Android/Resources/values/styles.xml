@@ -24,10 +24,11 @@
 
     
     
-    
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
   </style>
-  
+  <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+    <item name="android:textColor">#878787</item>
+  </style>
   <style name="MyTextAppearance.Material.Button" parent="@android:style/TextAppearance.Material.Button">
     <item name="textAllCaps">false</item>
     <item name="android:textAllCaps">false</item>

@@ -158,7 +158,7 @@ namespace HSAB.SAFA
           
              var htmlSource = new HtmlWebViewSource();
             //   htmlSource.Html = "<div style='background-color:transparent;padding:5px;width=100%;font-size:20px'>" + k.Description + "</div><div style=';padding:5px;width=100%;'></div><p>";
-            htmlSource.Html = "<HTML><body><div style='background-color:white;width=100%;font-size:18px;font-family:calibri'>" + printout + "</div><div width=100%;'></body></html>";
+            htmlSource.Html = "<HTML><body><div style='background-color:white;width=100%;font-size:18px;font-family:calibri;color:#878787'>" + printout + "</div><div width=100%;'></body></html>";
              output2.WidthRequest = 500;
             output2.Source = htmlSource;
  

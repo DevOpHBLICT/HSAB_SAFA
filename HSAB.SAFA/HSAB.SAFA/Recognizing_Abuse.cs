@@ -83,7 +83,7 @@ namespace HSAB.SAFA
 
             BackgroundColor = Color.White;
 
-
+            
 
 
             var data = new List<GetFrontPage>  {
@@ -185,14 +185,14 @@ namespace HSAB.SAFA
                 RowSpacing = 10
             };
 
-            Label Risk_Label = new Label {TextColor=Color.Black, Text = "Risk is not in itself a safeguarding issue, as not all risks will result in a negative impact on the individual." };
+            Label Risk_Label = new Label {TextColor=Color.FromHex("#878787"), Text = "Risk is not in itself a safeguarding issue, as not all risks will result in a negative impact on the individual." };
             Image Risk_Image = new Image { Source = "Risk.png" };
 
-            Label freq = new Label {TextColor = Color.Black,Text =  "Abuse may be an isolated incident or multiple, affecting one or more people." };
+            Label freq = new Label {TextColor = Color.FromHex("#878787"), Text =  "Abuse may be an isolated incident or multiple, affecting one or more people." };
            Image fi = new Image { Source = "Frequency.png" };
 
 
-            Label harm = new Label {TextColor=Color.Black, Text = "Harm should be taken to include not only ill treatment but also the impairment of, or avoidable deterioration in, physical or mental health and the impairment of physical, intellectual, emotional, social or behavioural development." };
+            Label harm = new Label {TextColor= Color.FromHex("#878787"), Text = "Harm should be taken to include not only ill treatment but also the impairment of, or avoidable deterioration in, physical or mental health and the impairment of physical, intellectual, emotional, social or behavioural development." };
             Image h = new Image { Source = "Harm.png" };
 
 

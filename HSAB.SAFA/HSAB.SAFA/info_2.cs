@@ -98,7 +98,92 @@ pre{overflow:auto; max-width:100%}
 
 
               }
-         
+            if (info == "Categories of Abuse")
+            {
+                htmlSource.Html = @"<html> 
+ <head> 
+<style>
+*{
+color:#878787;
+}
+.box {
+
+  border: 2px solid #7d2732;
+     border-radius: 5px;
+margin-top:5px;
+padding:5px;5px;5px;5px;
+}
+
+textblock
+{
+padding:5px;5px;5px;5px;
+}
+#id
+{
+color:#923b3d !important;
+}
+b{
+color:#923b3d !important;
+}
+pre{overflow:auto; max-width:100%}
+h2{
+color:#923b3d;
+}
+.down-arrow1 {
+   margin-left:20%;
+	width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #923b3d;
+}
+.down-arrow2 {
+   margin-left:50%;
+	width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #923b3d;
+}
+</style>
+
+<body>
+<b id='bb'> Categories of Abuse </b>
+
+<p>Incidents of abuse may be one-off or multiple, and affect one person or more.Professionals and others should look beyond single incidents or individuals to identify patterns of harm. Repeated instances of poor care may be an indication of more serious problems e.g.organisational abuse. It is therefore important to share this information appropriately. 
+
+<p>In 2013, the Home Office made changes to the definition of Domestic Abuse to include:
+
+<br/>·       Incidents of controlling, coercive or threatening behaviour, violence or abuse by someone who is or has been an intimate partner or family member (regardless of gender or sexuality) 
+<br/>·       Domestic abuse also includes honour based violence, Female Genital Mutilation and forced marriage.
+<br/>·       Local Domestic abuse resources and helplines: www.HertsSunflower.org  
+
+
+<p>Tel: 08 088 088 088 or offer to refer to Independent Domestic Violence Advisor.
+<p>Sexual exploitation could be considered under Sexual abuse or Modern Slavery.
+<p>Potential indicators of Financial Abuse include:
+<br/>·       Change in living conditions
+<br/>·       Lack of heating, clothing or food
+<br/>·       Inability to pay bills/unexplained  shortage of money
+<br/>·       Unexplained  withdrawals form an account
+<br/>·       Unexplained loss/ misplacement of  financial documents
+<br/>·       The recent addition of authorised signers on a client or donor’s signature card
+<br/>·       Sudden or unexplained changes in a will or other financial documents
+
+
+
+
+</body>
+</html>         ";
+}
+
+
+
+
+
+
 
 
             if (info == "Definition of an Adult at Risk")
@@ -153,11 +238,64 @@ pre{overflow:auto; max-width:100%}
 </textblock>
 </body>
 </html>";
+                if (info == "Recognizing Abuse")
+                {
+                    htmlSource.Html = @"<html> 
+
+                Anyone can witness or become aware of information suggesting that abuse and neglect is occurring.The adult may say or do things that hint that all is not well. Regardless of how the safeguarding concern is identified, everyone should understand what to do and where to go locally to get help and advice.
+Professionals should:
+·       Know about the different types of abuse and neglect and their signs·       Know about the different types of abuse and neglect and their signs
+·       Support the adult to keep safe·       Support the adult to keep safe
+·       Knowing who to tell about suspected abuse or neglect·       Knowing who to tell about suspected abuse or neglect
+·       Support adults to think and weigh up the risks and benefits of different options when exercising choice and control
+Reporting a concern";
+
+};
+                if (info == "Reporting a concern")
+                {
+                    htmlSource.Html = @"<html> 
 
 
+                1.Is there an immediate risk? Consider if the Police need to be called or the person removed to a place of safety. Do you need to inform your line manager?
+
+2.Call the relevant agency and follow up with a concern form
+
+3.Discuss concern with person.Record their wishes on the concern form but you have a duty to report even if they say NO.
+
+4.Describe the circumstances of the suspected or actual abuse and what actions you have taken to try to protect the person. 
+
+5.Discuss with the Safeguarding lead for your organisation or line manager if you are in any doubt
+
+6.Email or fax the concern form to the relevant agency";
+                };
 
 
+                if (info == "Personal Safeguarding")
+                {
+                    htmlSource.Html = @"<html> 
 
+Making safeguarding personal
+‘Making Safeguarding Personal’ informs the safeguarding enquiries. The person should be involved at every stage of the process, be given all relevant information and have the opportunity to attend meetings. This includes the initial discussion about reporting the concern and what they wish to happen.  Even if they do not wish a concern to be raised it is important to explain that there is Duty of Care to pass on the concern but that their wishes are recorded.
+
+6 “I” statements which are linked to the 6 Principles are:
+“I am asked what I want as the outcomes from the safeguarding process and these directly inform what happens”.
+
+“I receive clear and simple information about what abuse is, how to recognise the signs and what I can do to seek help”.
+
+“I am sure that the professionals will work in my interest, as I see them and they will only get involved as much as needed”.
+
+“I get help and support to report abuse and neglect. I get help so that I am able to take part in the safeguarding process to the extent to which I want”.
+
+“I know that staff treat any personal and sensitive information in confidence, only sharing what is helpful and necessary. I am confident that professionals will work together and with me to get the best result for me”.
+
+“I understand the role of everyone involved in my life and so do they”.
+
+References:
+ 
+The Care Act 2014
+
+</html";
+                }
 
             }
             if (info == "What is Safeguarding?")
