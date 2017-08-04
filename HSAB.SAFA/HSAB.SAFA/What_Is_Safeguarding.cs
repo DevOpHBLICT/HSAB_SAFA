@@ -104,29 +104,17 @@ namespace HSAB.SAFA
                      }
             var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
-
+            browser.HeightRequest = 400;
             htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
             browser.Source = htmlSource;
 
 
 
-          
+
             htmlSource.Html = @"<html> 
  <head> 
 <style>
 
-.box {
-
-  border: 2px solid #7d2732;
-     border-radius: 5px;
-margin-top:5px;
-padding:5px;5px;5px;5px;
-}
-
-textblock
-{
-padding:5px;5px;5px;5px;
-}
 #id
 {
 color:#923b3d !important;
@@ -134,47 +122,35 @@ color:#923b3d !important;
 b{
 color:#923b3d !important;
 }
-pre{overflow:auto; max-width:100%}
 
-section 
-{width:50%;}
-
-h2{
-color:#923b3d;
+html, body { height: 80%; padding: 0; margin: 0; }
+*{
+color:#878787;
 }
-
-#container {
-    width: 50;
-    background-color: #ffcc33;
-    margin: auto;
+body
+{
+margin-left:5px;
 }
-#first {
-    width: 100px;
-    float: left;
-    height: 300px;
-        background-color: blue;
+div { width: 45%; height: 60%; float: left; }
+#div1 {border-style:solid;border-color:blue; background: white;margin:2 ;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
+#div2 {border-style:solid;border-color:red; background: white;margin:2;padding:2px;text-align:center;vertical-align:middle;display:table-cell; }
+#div3 {border-style:solid;border-color:green; background: white; margin:2;padding:2;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
+#div4 {border-style:solid;border-color:brown; background: white;margin:2 ;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
 }
-#second {
-    width: 200px;
-    float: left;
-    height: 300px;
-    background-color: green;
-}
-
-
 </style>
 <meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
- <body> 
-<p><h2 id='bb'>Safeguarding means:</h2>
-<div id='container'>
-<div id='first'>protecting an adult's right to live in safety, free from abuse and neglect.</div>
-<div id='second'>Stop abuse or neglect where possible.</div>
-<div id='clear'></div>
-< div id='third'>Prevent harm and reduce the risk of abuse or neglect in a way that supports them in making choices and having control about how they want to live.</div>
-<div id-'forth'>Raise public awareness to enable communities as a whole, together with professionals, help to prevent, identify and respond to abuse and neglect.</div>
-<div id = 'clear' ></div>
-</div>
+ <body>
+<img src='P.png'/>
+<p><h2><b id ='bb'>Safeguarding means:</b></h2></p>
+<p><b id='bb'>Protecting </b> an adult's right to live in safety, free from abuse and neglect.</div>
+<hr>
+<p><b id='bb'>Stop abuse</b> or neglect where possible.</div>
+<hr>
+<p><b id='bb'>Prevent</b> harm and reduce the risk of abuse or neglect in a way that supports them in making choices and having control about how they want to live.</div>
+<hr>
+<p><b id='bb'>Raise</b> public awareness to enable communities as a whole, together with professionals, help to prevent, identify and respond to abuse and neglect.</div>
+
   </body>
 </html>";
 

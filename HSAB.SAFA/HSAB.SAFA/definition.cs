@@ -170,13 +170,15 @@ namespace HSAB.SAFA
             var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
 
+          
 
 
-            
-                htmlSource.Html = @"<html> 
+            htmlSource.Html = @"<html> 
  <head> 
 <style>
-
+*{
+color:#878787;
+}
 .box {
 
   border: 2px solid #7d2732;
@@ -223,23 +225,15 @@ color:#923b3d;
                  </head> 
  <body> 
 <p><h2 id='bb'>Definition of an adult at risk</h2>
-
+<img src='P.png' height='90px'/>
 <p>According to The Care Act (2014), an adult at risk is a person who:  
-  <div class='box'> 
-Has care and support needs, whether or not the Local Authority e.g. Hertfordshire County Council (HCC) is meeting any of those needs <b>And</b>;
-</span>
-</div>
-<p><div class='down-arrow1'></div></p>
-
-<p><div class='box'> 
-Is experiencing, or at risk of, abuse or neglect; <b>And;</b>
-</div>
-
-
-<p><div class='down-arrow2'></div></p>
-
-<div class='box'>As a result of those care and support needs is unable to protect themselves from abuse or neglect or the risk of it. </div>
-
+ 
+<p>Has care and support needs, whether or not the Local Authority e.g. Hertfordshire County Council (HCC) is meeting any of those needs <b>And</b>;
+<hr/>
+<p>Is experiencing, or at risk of, abuse or neglect; <b>And;</b>
+<hr/>
+<p>As a result of those care and support needs is unable to protect themselves from abuse or neglect or the risk of it. </div>
+<hr/>
 
 
   </body>
@@ -257,7 +251,7 @@ Is experiencing, or at risk of, abuse or neglect; <b>And;</b>
 
 
 
-                Content = browser;
+                Content=   browser ;
             }
         }
     }

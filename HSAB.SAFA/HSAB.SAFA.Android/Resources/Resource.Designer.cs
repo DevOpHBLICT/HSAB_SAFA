@@ -2302,8 +2302,8 @@ namespace HSAB.SAFA.Droid
 			// aapt resource value: 0x7f0200c2
 			public const int mr_ic_play_light = 2130837698;
 			
-			// aapt resource value: 0x7f0200c8
-			public const int notification_template_icon_bg = 2130837704;
+			// aapt resource value: 0x7f0200ca
+			public const int notification_template_icon_bg = 2130837706;
 			
 			// aapt resource value: 0x7f0200c3
 			public const int p1 = 2130837699;
@@ -2315,10 +2315,16 @@ namespace HSAB.SAFA.Droid
 			public const int p3 = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int Risk = 2130837702;
+			public const int Page1 = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int tick = 2130837703;
+			public const int Page2 = 2130837703;
+			
+			// aapt resource value: 0x7f0200c8
+			public const int Risk = 2130837704;
+			
+			// aapt resource value: 0x7f0200c9
+			public const int tick = 2130837705;
 			
 			static Drawable()
 			{

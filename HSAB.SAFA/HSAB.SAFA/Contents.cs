@@ -190,13 +190,23 @@ namespace HSAB.SAFA
                 }
 
             };
+            var i = new Image
+            {
 
+                //     BackgroundColor =Color.White,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                HeightRequest = 70,
+                //   WidthRequest=90,
+                //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
+                Source = ImageSource.FromFile("Page1.png")
+            };
             var k = new StackLayout
             {
                 Padding = 5,
                 //  BackgroundColor = Color.White,
                 Children = {
-                    _pharmacylist,logo
+                   i, _pharmacylist,logo
 
                 }
             };
