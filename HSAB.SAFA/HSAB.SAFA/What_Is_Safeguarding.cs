@@ -129,26 +129,21 @@ color:#878787;
 }
 body
 {
-margin-left:5px;
+margin:20px;
 }
-div { width: 45%; height: 60%; float: left; }
-#div1 {border-style:solid;border-color:blue; background: white;margin:2 ;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
-#div2 {border-style:solid;border-color:red; background: white;margin:2;padding:2px;text-align:center;vertical-align:middle;display:table-cell; }
-#div3 {border-style:solid;border-color:green; background: white; margin:2;padding:2;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
-#div4 {border-style:solid;border-color:brown; background: white;margin:2 ;padding:2px;text-align:center;vertical-align:middle;display:table-cell;}
 }
 </style>
 <meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
  <body>
-<img src='P.png'/>
+<img src='P.png' height='100px'/>
 <p><h2><b id ='bb'>Safeguarding means:</b></h2></p>
 <p><b id='bb'>Protecting </b> an adult's right to live in safety, free from abuse and neglect.</div>
-<hr>
+
 <p><b id='bb'>Stop abuse</b> or neglect where possible.</div>
-<hr>
+
 <p><b id='bb'>Prevent</b> harm and reduce the risk of abuse or neglect in a way that supports them in making choices and having control about how they want to live.</div>
-<hr>
+
 <p><b id='bb'>Raise</b> public awareness to enable communities as a whole, together with professionals, help to prevent, identify and respond to abuse and neglect.</div>
 
   </body>

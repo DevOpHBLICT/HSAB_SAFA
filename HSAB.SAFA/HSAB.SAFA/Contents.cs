@@ -129,13 +129,14 @@ namespace HSAB.SAFA
 
             cell.SetBinding(TextCell.TextProperty, "Name");
             cell.SetBinding(ImageCell.ImageSourceProperty, "Image");
+      
             _pharmacylist.ItemTemplate = cell;
             // _pharmacylist.ItemTemplate = new DataTemplate(typeof(ImageCell));
             // _pharmacylist.ItemTemplate.SetBinding(ImageCell.TextProperty, "Name");
             // _pharmacylist.ItemTemplate.SetBinding(ImageCell.ImageSourceProperty, "Image");
             // _pharmacylist.SetValue(TextCell.TextColorProperty, Color.White);
             //  _pharmacylist.HeightRequest = 500;
-            _pharmacylist.RowHeight = 65;
+            _pharmacylist.RowHeight = 60;
 
             var a = new StackLayout
             {
@@ -173,7 +174,7 @@ namespace HSAB.SAFA
 
             var logo = new StackLayout
             {
-                Padding = new Thickness(5, 5, 5, 5),
+                Padding = new Thickness(2, 2, 2, 2),
                 Orientation = StackOrientation.Horizontal,
 
                 Children = {
@@ -182,7 +183,7 @@ namespace HSAB.SAFA
                            //     BackgroundColor =Color.White,
                                   VerticalOptions = LayoutOptions.CenterAndExpand,
                            HorizontalOptions = LayoutOptions.CenterAndExpand,
-                          HeightRequest=70,
+                          HeightRequest=40,
                         //   WidthRequest=90,
                    //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
                             Source =ImageSource.FromFile( "HSAB.png" )
@@ -196,14 +197,14 @@ namespace HSAB.SAFA
                 //     BackgroundColor =Color.White,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                HeightRequest = 70,
+                HeightRequest = 90,
                 //   WidthRequest=90,
                 //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
                 Source = ImageSource.FromFile("Page1.png")
             };
             var k = new StackLayout
             {
-                Padding = 5,
+                Padding = 2,
                 //  BackgroundColor = Color.White,
                 Children = {
                    i, _pharmacylist,logo

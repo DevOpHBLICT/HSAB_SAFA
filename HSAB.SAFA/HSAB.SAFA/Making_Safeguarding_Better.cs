@@ -161,8 +161,8 @@ htmlSource.Html = @"<html>
  <link rel=""stylesheet"" href=""default.css""> 
  </head> 
  <body> 
-<h3 id='bb'>Making Safeguarding Personal </h3>
-<table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td> Making safeguarding personal is a shift in culture and professional practice. </td></tr> 
+<h3 style='color:#953735'>Making Safeguarding Personal </h3>
+<table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td> Is a shift in culture and professional practice. </td></tr> 
 <table><tr><td style='vertical-align:top;margin-top:8px' > <div id='triangle-right'></div><td><td>It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety.  </td></tr>
 <table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td>It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process. </td></tr>
 <table><tr><td style='vertical-align:top;margin-top:8px' > <div id='triangle-right'></div><td><td>The alerter must note the person's wishes but still has a duty to raise any safeguarding concerns that are disclosed, witnessed or suspected to the Local Authority.  </td></tr></table>

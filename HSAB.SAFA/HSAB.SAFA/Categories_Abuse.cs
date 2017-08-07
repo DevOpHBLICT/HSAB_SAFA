@@ -151,36 +151,18 @@ namespace HSAB.SAFA
 
             title.TextColor = Color.FromHex("#953735");
 
-            //  var pharm = database.GetContents();
-
-            //  BackgroundImage = "people.jpg";
-            /*
-            Button Physical_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth=2, Text = "Physical", BorderColor  = Color.FromHex("#7D4D68"), TextColor = Color.FromHex("#7D4D68"), VerticalOptions=LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Domestic_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Domestic", BorderColor = Color.FromHex("#31859C"), TextColor = Color.FromHex("#31859C"), VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand , FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-             Button Sexual_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Sexual", BorderColor = Color.FromHex("#C0504D"), TextColor = Color.FromHex("#C0504D"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Psychological_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Psychological", BorderColor = Color.FromHex("#9BBB59"), TextColor = Color.FromHex("#9BBB59"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Financial_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Financial/Material", BorderColor = Color.FromHex("#376092"), TextColor = Color.FromHex("#376092"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Modern_Slavery = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Modern Slavery", BorderColor = Color.FromHex("#AD1D73"), TextColor = Color.FromHex("#AD1D73"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Discriminatory_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Discriminatory", BorderColor = Color.FromHex("#7030A0"), TextColor = Color.FromHex("#7030A0"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Organisational_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Organisational", BorderColor = Color.FromHex("#4BACC6"), TextColor = Color.FromHex("#4BACC6"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Neglect_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Neglect and acts of omission", BorderColor = Color.FromHex("#FF5050"), TextColor = Color.FromHex("#FF5050"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Self_Neglect = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Self-neglect", BorderColor = Color.FromHex("#731351"), TextColor = Color.FromHex("#731351"), HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-
-            */
-
+         
             var data = new List<GetFrontPage>  {
 
-            new GetFrontPage("Physical abuse", "Arrow1.png"),
-                new GetFrontPage("Domestic abuse", "Arrow2.png"),
-                   new GetFrontPage("Sexual abuse", "Arrow3.png"),
-               new GetFrontPage("Psychological abuse", "Arrow4.png"),
-                 new GetFrontPage("Sexual abuse", "Arrow1.png"),
-                 new GetFrontPage("Psychological abuse", "Arrow2.png"),
-                      new GetFrontPage("Modern Slavery", "Arrow3.png"),
-               new GetFrontPage("Discriminatory abuse", "Arrow4.png"),
-                 new GetFrontPage("Organisational abuse", "Arrow1.png"),
-                 new GetFrontPage("Neglect and acts of omission", "Arrow2.png"),
-                      new GetFrontPage("Self Neglect", "Arrow3.png"),
+            new GetFrontPage("Physical abuse", "down.png"),
+                new GetFrontPage("Domestic abuse", "down.png"),
+                   new GetFrontPage("Sexual abuse", "down.png"),
+                   new GetFrontPage("Psychological abuse", "down.png"),
+                      new GetFrontPage("Modern Slavery", "down.png"),
+               new GetFrontPage("Discriminatory abuse", "down.png"),
+                 new GetFrontPage("Organisational abuse", "down.png"),
+                 new GetFrontPage("Neglect and acts of omission", "down.png"),
+                      new GetFrontPage("Self Neglect", "down.png"),
 
             };
 
@@ -203,19 +185,7 @@ namespace HSAB.SAFA
                 RowSpacing = 5
             };
 
-            /*
-            grid.Children.Add(Physical_Abuse, 0, 0); // Left, First element 
-            grid.Children.Add(Domestic_Abuse, 1, 0); // Right, First element 
-            grid.Children.Add(Sexual_Abuse, 0, 1); // Left, Second element 
-            grid.Children.Add(Psychological_Abuse, 1, 1); // Right, Second element 
-            grid.Children.Add(Financial_Abuse, 0, 2); // Left, Second element 
-            grid.Children.Add(Modern_Slavery, 1, 2); // Right, Second element 
-            grid.Children.Add(Discriminatory_Abuse, 0, 3); // Left, Second element 
-            grid.Children.Add(Organisational_Abuse, 1, 3); // Right, Second element 
-            grid.Children.Add(Neglect_Abuse, 0, 4); // Left, Second element 
-            grid.Children.Add(Self_Neglect, 1, 4); // Right, Second element 
-            */
-
+    
 
 
             if (Device.OS == TargetPlatform.Windows)
@@ -280,36 +250,14 @@ namespace HSAB.SAFA
 
 
 
-            var t = new Label { HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center, Text = "", Font = Font.SystemFontOfSize(20, FontAttributes.Bold) };
-            var u = new Label { Text = "", FontSize = 10 };
-
-
+   
 
             if (Device.OS == TargetPlatform.Windows)
             {
 
-                //  Padding = new Thickness (5, 5, 5, 5), 
-                a.Children.Add(s);
-                a.Children.Add(t);
-                a.Children.Add(u);
-                NavigationPage.SetHasNavigationBar(this, false);
+                 NavigationPage.SetHasNavigationBar(this, false);
             }
-            else
-            {
-                a.Children.Add(t);
-                a.Children.Add(u);
-
-
-            }
-
-
-
-            //   var p = new StackLayout
-            //   {
-            //       Padding = 5,
-            //       Children = { title }
-            //   };
-
+         
 
 
             var logo = new StackLayout

@@ -24,7 +24,7 @@ namespace HSAB.SAFA
             NavPage = new NavigationPage(new Contents());
             if (Device.OS != TargetPlatform.Windows)
             {
-                
+
 
                 NavPage.BarBackgroundColor = Color.FromHex("923b3d");
                 NavPage.BarTextColor = Color.White;
@@ -35,8 +35,15 @@ namespace HSAB.SAFA
                     //    Icon ="back.png",
                     Icon = "home.png",
                     //    Command = new Command(() => nav.PushAsync(new Contents(database))),
-                    Command = new Command(() => App.NavPage.PopToRootAsync())
+                    Command = new Command(() =>
+                    {
+                        App.app_title = "HSAB SAFA Prompts";
+                        App.NavPage.PopToRootAsync();
+                        }
+                        ) 
+                
                 });
+
                 App.NavPage.ToolbarItems.Add(new ToolbarItem
                 {
 
@@ -45,9 +52,17 @@ namespace HSAB.SAFA
                     Icon = "info2.png",
                     //    Command = new Command(() => nav.PushAsync(new Contents(database))),
                     Command = new Command(() =>
+                    {
+                        if (string.IsNullOrEmpty(App.app_title))
+                        {
+                            App.NavPage.PushAsync(new info_2(""));
+                        }
+                        else
+                        {
+                            App.NavPage.PushAsync(new info_2(App.app_title));
+        
 
-                    
-                       App.NavPage.PushAsync(new info_2(app_title))
+                } }
                 )
                 });
 

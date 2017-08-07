@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="12" android:versionName="12" package="hbl_hsab_safa_SAFA.Droid">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="SAFA"></application>
+	<application android:label="SAFA" android:icon="@drawable/icon"></application>
 </manifest>

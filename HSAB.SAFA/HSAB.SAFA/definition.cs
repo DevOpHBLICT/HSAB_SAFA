@@ -28,15 +28,15 @@ namespace HSAB.SAFA
         String _BGColor;
 
 
-
-
-
         void OnyesButtonClicked(object sender, EventArgs e)
         {
-            var tg = new d(yesnext, t, _BGColor);
+            var tg = new What_Is_Safeguarding("What is Safeguarding?");
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
         }
 
+
+
+     
         void BackButtonClicked(object sender, EventArgs e)
         {
             back.IsEnabled = false;
@@ -62,115 +62,12 @@ namespace HSAB.SAFA
         {
             Title = "Definition";
             Label l = new Label { Text = "\r\n According to The Care Act (2014), an adult at risk is a person who:" };
-            Image logo =
-          new Image
-          {
+             
 
-              //     BackgroundColor =Color.White,
-              VerticalOptions = LayoutOptions.CenterAndExpand,
-              HorizontalOptions = LayoutOptions.CenterAndExpand,
-              HeightRequest = 30,
-              //   WidthRequest=90,
-              //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-              Source = ImageSource.FromFile("down.png")
-
-
-          };
-
-            Image logo2 =
-          new Image
-          {
-
-              //     BackgroundColor =Color.White,
-              VerticalOptions = LayoutOptions.CenterAndExpand,
-              HorizontalOptions = LayoutOptions.CenterAndExpand,
-              //   WidthRequest=90,
-              HeightRequest = 30,
-              //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-              Source = ImageSource.FromFile("down.jpg")
-
-
-          };
-            Image P1 =
-       new Image
-       {
-
-           //     BackgroundColor =Color.White,
-           VerticalOptions = LayoutOptions.CenterAndExpand,
-           HorizontalOptions = LayoutOptions.CenterAndExpand,
-           //   WidthRequest=90,
-           HeightRequest = 90,
-           //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-           Source = ImageSource.FromFile("p1.png")
-
-
-       };
-            Image P2 =
-                  new Image
-                  {
-
-                      //     BackgroundColor =Color.White,
-                      VerticalOptions = LayoutOptions.CenterAndExpand,
-                      HorizontalOptions = LayoutOptions.CenterAndExpand,
-                      //   WidthRequest=90,
-                      HeightRequest = 90,
-                      //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-                      Source = ImageSource.FromFile("p2.png")
-
-
-                  };
-
-            Image P3 =
-      new Image
-      {
-
-          //     BackgroundColor =Color.White,
-          VerticalOptions = LayoutOptions.CenterAndExpand,
-          HorizontalOptions = LayoutOptions.CenterAndExpand,
-          //   WidthRequest=90,
-          HeightRequest = 90,
-          //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-          Source = ImageSource.FromFile("p3.png")
-
-
-      };
-
-            
-
-            ContentView t = new ContentView
-            {
-                BackgroundColor = Color.FromHex("953735"),
-                Padding = new Thickness(15, Device.OnPlatform(15, 0, 0), 15, 15),
-
-                Content =
-                new Label
-                {
-                    FontFamily = "Calibri",
-                    FontSize = 20,
-                    TextColor = Color.White,
-                    Text = "Is experiencing, or at risk of, abuse or neglect; And"
-                }
-            };
-            ContentView u = new ContentView
-            {
-                BackgroundColor = Color.FromHex("632523"),
-                Padding = new Thickness(15, Device.OnPlatform(15, 0, 0), 15, 15),
-
-                Content =
-               new Label
-               {
-                   FontFamily = "Calibri",
-                   FontSize = 20,
-
-                   TextColor = Color.White,
-                   Text = "As a result of those care and support needs is unable to protect themselves from abuse or neglect or the risk of it. "
-               }
-            };
-
-            var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
+               var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
 
-          
+           
 
 
             htmlSource.Html = @"<html> 
@@ -220,6 +117,10 @@ color:#923b3d;
   
   border-top: 20px solid #923b3d;
 }
+body
+{
+margin:10px;
+}
 </style>
 <meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
@@ -229,11 +130,11 @@ color:#923b3d;
 <p>According to The Care Act (2014), an adult at risk is a person who:  
  
 <p>Has care and support needs, whether or not the Local Authority e.g. Hertfordshire County Council (HCC) is meeting any of those needs <b>And</b>;
-<hr/>
+
 <p>Is experiencing, or at risk of, abuse or neglect; <b>And;</b>
-<hr/>
+
 <p>As a result of those care and support needs is unable to protect themselves from abuse or neglect or the risk of it. </div>
-<hr/>
+
 
 
   </body>
@@ -243,15 +144,23 @@ color:#923b3d;
 
 
 
+            Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "What is Safeguarding?", IsVisible = true, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
+            yes.Clicked += OnyesButtonClicked;
+            yes.HeightRequest = 70;
 
+            BackgroundColor = Color.White;
 
-
-                htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
+            htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
                 browser.Source = htmlSource;
+            browser.HeightRequest = 600;
 
+            Content = new StackLayout
+            {
+                Padding = 5,
+                Children = { browser, yes }
+            };
 
-
-                Content=   browser ;
+          
             }
         }
     }
