@@ -151,7 +151,7 @@ margin:15px;
                 htmlSource.Html =header_string +  @" <body>
 <b id='bb'> Categories of Abuse </b>
 
-<p>Incidents of abuse may be one-off or multiple, and affect one person or more.Professionals and others should look beyond single incidents or individuals to identify patterns of harm. Repeated instances of poor care may be an indication of more serious problems e.g.organisational abuse. It is therefore important to share this information appropriately. 
+<p>Incidents of abuse may be one-off or multiple, and affect one person or more. Professionals and others should look beyond single incidents or individuals to identify patterns of harm. Repeated instances of poor care may be an indication of more serious problems e.g. organisational abuse. It is therefore important to share this information appropriately. 
 
 <p>In 2013, the Home Office made changes to the definition of <b id='bb'>Domestic Abuse</b> to include:
 
@@ -165,9 +165,9 @@ margin:15px;
 <p>Potential indicators of <b id='bb'>Financial Abuse</b> include:
 <br/>· Change in living conditions
 <br/>· Lack of heating, clothing or food
-<br/>· Inability to pay bills/unexplained  shortage of money
-<br/>· Unexplained  withdrawals form an account
-<br/>· Unexplained loss/ misplacement of  financial documents
+<br/>· Inability to pay bills/unexplained shortage of money
+<br/>· Unexplained  withdrawals from an account
+<br/>· Unexplained loss/misplacement of financial documents
 <br/>· The recent addition of authorised signers on a client or donor’s signature card
 <br/>· Sudden or unexplained changes in a will or other financial documents
 </body>
@@ -179,11 +179,11 @@ margin:15px;
                 htmlSource.Html = header_string + @"<p><h2 id='bb'>Definition of an Adult at Risk</p></h2>
 <b id='bb'>The Care Act (2014)</b>
 <p>Implemented in April 2015 and the biggest change to social care policy in the last 30 years. Safeguarding duties apply to an adult who:
-<br/><p>• Has needs for care and support(whether or not the local authority is meeting any of those needs.
+<br/><p>• Has needs for care and support (whether or not the local authority is meeting any of those needs.
 <br/><p>• Is experiencing, or at risk of, abuse or neglect; <b id='bb'>and</b>
 <br/><p>• As a result of the those care and support needs is unable to protect themselves from the risk of, or the experience of abuse or neglect.
 
-<p> ‘The local authority must make(or cause to be made) whatever enquiries it thinks necessary to enable it to decide whether any action should be taken in the adult’s case (whether under this Part or otherwise) and, if so, what and by whom.’ (Care Act 2014: Section 42)
+<p> ‘The local authority must make (or cause to be made) whatever enquiries it thinks necessary to enable it to decide whether any action should be taken in the adult’s case (whether under this Part or otherwise) and, if so, what and by whom.’ (Care Act 2014: Section 42)
 
 <p>Six key principles underpin all adult safeguarding work:
 
@@ -195,15 +195,15 @@ margin:15px;
 
 <br><p><b id='bb'>Protection:</b> Support and representation for those in greatest need.
 
-<br><p><b id='bb'>Partnership:</b> Local solutions through services working with their communities.Communities have a part to play in preventing, detecting and reporting neglect and abuse.
+<br><p><b id='bb'>Partnership:</b> Local solutions through services working with their communities. Communities have a part to play in preventing, detecting and reporting neglect and abuse.
 
 <br><p><b id='bb'>Accountability:</b> Accountability and transparency in delivering safeguarding.
 
 <p>If a Safeguarding enquiry is not pursued by the relevant agency, there may be an individual case review for the person to reassess the care package and support, to ensure it is appropriate and meeting the individual’s needs.
 <p><b id='bb'>Hertfordshire Safeguarding Adults Board(HSAB)</b>
-<p>Under the Care Act 2014 there is a legal obligation to have a local Safeguarding Adults Board.This is a multi-agency partnership where all agencies in Hertfordshire with a responsibility to safeguard adults at risk meet to coordinate activity and promote wellbeing.
+<p>Under the Care Act 2014 there is a legal obligation to have a local Safeguarding Adults Board. This is a multi-agency partnership where all agencies in Hertfordshire with a responsibility to safeguard adults at risk meet to coordinate activity and promote wellbeing.
 <p>The <b id='bb'>HSAB</b> are central to the development interagency policies, scrutinise safeguarding work of the individual agencies and challenge current practices.
-<p>The <b id='bb'>HSAB</b> can also commission Safeguarding Adult Reviews(SARs) which look in detail into cases where there has been a death or serious harm to an adult at risk and scrutinise how individual agencies dealt with the risks and concerns.From this the HSAB can make recommendations to change in practice and procedures in the organisations involved.
+<p>The <b id='bb'>HSAB</b> can also commission Safeguarding Adult Reviews (SARs) which look in detail into cases where there has been a death or serious harm to an adult at risk and scrutinise how individual agencies dealt with the risks and concerns. From this the HSAB can make recommendations to change in practice and procedures in the organisations involved.
 </textblock>
 </body>
 </html>"; }
@@ -229,7 +229,7 @@ if (info == "Recognizing Abuse")
 
 <p>2.<b id='bb'> Call</b> the relevant agency and follow up with a concern form.
 
-<p>3.<b id='bb'> Discuss</b> concern with person.Record their wishes on the concern form but you have a duty to report even if they say <b id='bb'>NO</b>.
+<p>3.<b id='bb'> Discuss</b> concern with person. Record their wishes on the concern form but you have a duty to report even if they say <b id='bb'>NO</b>.
 
 <p>4.<b id='bb'>  Describe</b> the circumstances of the suspected or actual abuse and what actions you have taken to try to protect the person. 
 
@@ -270,7 +270,7 @@ if (info == "Recognizing Abuse")
             
             if (info == "What is Safeguarding?")
             {
-                htmlSource.Html = header_string + @"<p><h2 id='bb'>What is Safeguarding?</p></h2><b id='bb'>Incidents of abuse</b> may be one-off or multiple, and affect one person or more. Professionals and others should look beyond single incidents or individuals to identify patterns of harm. Repeated instances of poor care may be an indication of more serious problems e.g.organisational abuse. It is therefore important to share this information appropriately.
+                htmlSource.Html = header_string + @"<p><h2 id='bb'>What is Safeguarding?</p></h2><b id='bb'>Incidents of abuse</b> may be one-off or multiple, and affect one person or more. Professionals and others should look beyond single incidents or individuals to identify patterns of harm. Repeated instances of poor care may be an indication of more serious problems e.g. organisational abuse. It is therefore important to share this information appropriately.
                <p>In 2013, the Home Office made changes to the definition of Domestic Abuse to include:
                <br/> · Incidents of controlling, coercive or threatening behaviour, violence or abuse by someone who is or has been an intimate partner or family member (regardless of gender or sexuality) 
                 <br/>· Domestic abuse also includes honour based violence, Female Genital Mutilation and forced marriage.
@@ -280,9 +280,9 @@ if (info == "Recognizing Abuse")
                 <p>Potential indicators of <b id='bb'>Financial Abuse</b> include:
                 <br/>· Change in living conditions
                 <br/>· Lack of heating, clothing or food
-                <br/>· Inability to pay bills/ unexplained  shortage of money
+                <br/>· Inability to pay bills/unexplained shortage of money
                 <br/>· Unexplained withdrawals form an account
-                <br/>· Unexplained loss/ misplacement of financial documents
+                <br/>· Unexplained loss/misplacement of financial documents
                 <br/>· The recent addition of authorised signers on a client or donor’s signature card
                 <br/>· Sudden or unexplained changes in a will or other financial documents";
 
