@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HSAB.SAFA", "HSAB.SAFA\HSAB.SAFA\HSAB.SAFA.shproj", "{1AFFB7B7-0058-4C3D-A650-DB3338FC7AB2}"
 EndProject
@@ -12,8 +12,8 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		HSAB.SAFA\HSAB.SAFA\HSAB.SAFA.projitems*{1affb7b7-0058-4c3d-a650-db3338fc7ab2}*SharedItemsImports = 13
-		HSAB.SAFA\HSAB.SAFA\HSAB.SAFA.projitems*{fad650aa-bc02-4375-93f1-78fbd3d864fd}*SharedItemsImports = 4
 		HSAB.SAFA\HSAB.SAFA\HSAB.SAFA.projitems*{fc03d774-6d15-46f9-9c2e-62eb551af1cb}*SharedItemsImports = 4
+		HSAB.SAFA\HSAB.SAFA\HSAB.SAFA.projitems*{fad650aa-bc02-4375-93f1-78fbd3d864fd}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -60,12 +60,8 @@ Global
 		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhone.Build.0 = Release|Any CPU
-		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhone.ActiveCfg = Debug|Any CPU
 		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{FAD650AA-BC02-4375-93F1-78FBD3D864FD}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{FC03D774-6D15-46F9-9C2E-62EB551AF1CB}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
 		{FC03D774-6D15-46F9-9C2E-62EB551AF1CB}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
 		{FC03D774-6D15-46F9-9C2E-62EB551AF1CB}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone

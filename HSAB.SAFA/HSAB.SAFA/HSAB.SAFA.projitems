@@ -23,8 +23,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Making_Safeguarding_Better.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Recognizing_Abuse.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Recognizing_Abuse2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Recognising_Abuse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Recognising_Abuse2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RoundedCornersButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)What_Is_Safeguarding.cs" />
   </ItemGroup>

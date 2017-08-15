@@ -15,13 +15,13 @@ namespace HSAB.SAFA
 
 
 
-    public class Recognizing_Abuse : ContentPage
+    public class Recognising_Abuse : ContentPage
     {
       
 
         void OnyesButtonClicked(object sender, EventArgs e)
         {
-            var tg = new Recognizing_Abuse2();
+            var tg = new Recognising_Abuse2();
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
         }
 
@@ -52,19 +52,18 @@ namespace HSAB.SAFA
 
 
 
-        public Recognizing_Abuse()
+        public Recognising_Abuse()
         {
 
          
             //    var u = new Label { Text = "Antibiotics Guidelines" , TextColor = Color.FromHex("1760ae"), FontSize = 10 };
             //   Title = "Contents";
 
-            App.app_title = "Recognizing Abuse";
-            Title = "Recognizing Abuse";
+            App.app_title = "Recognising Abuse";
+            Title = "Recognising Abuse";
             BackgroundColor = Color.White;
 
-            Label title = null;
-
+        
             //  BackgroundColor = Color.FromHex("#e6b9b8");
 
 
@@ -82,9 +81,7 @@ namespace HSAB.SAFA
             var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
             browser.HeightRequest = 600;
-            htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
-            browser.Source = htmlSource;
-
+       
 
 
 
@@ -125,15 +122,8 @@ margin:20px;
 
 
 
-            Content = browser;
-
-
-
-
-           
-
-        
-        
+            htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
+            browser.Source = htmlSource;
 
             Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "Next", IsVisible = true, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
             yes.Clicked += OnyesButtonClicked;

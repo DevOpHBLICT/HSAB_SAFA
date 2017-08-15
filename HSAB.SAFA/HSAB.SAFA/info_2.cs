@@ -13,13 +13,7 @@ namespace HSAB.SAFA
 
     public class info_2 : ContentPage
     {
-        string s = "";
-        string a = "";
-        string b = "";
-        string c = "";
-        string d = "";
-        string e = "";
-
+      
 
         void BackButtonClicked(object sender, EventArgs e)
         {
@@ -61,8 +55,7 @@ namespace HSAB.SAFA
 
             fs.Spans.Add(new Span { ForegroundColor = Color.Black, FontSize = 14, FontAttributes = FontAttributes.Italic, Text = "'The requirement for continuous / complete supervision and control cannot and should not be interpreted as requiring 24 hour monitoring and/or that the person is to be physically accompanied over a continuous 24 hour period. In other words, if the individual is subject to such monitoring or such degree of accompaniment, then the necessary degree of continuity or completeness will be satisfied. But it is capable of being satisfied even if the supervision and control is 'lighter touch'" });
 
-            var Str = "";
-
+         
             var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
 
@@ -70,7 +63,9 @@ namespace HSAB.SAFA
 
             var header_string = @"<html>
  <head>
-<style>
+ <meta name='viewport' content='width = device-width, initial-scale = 0.25, maximum-scale = 3.0 user-scalable = 1'>
+
+                <style>
 
 *{
 color:#878787;
@@ -142,10 +137,76 @@ margin:15px;
 </head>
     <body>";
 
-            if ((info == "HSAB SAFA Prompts") || (string.IsNullOrEmpty(info)))
+            if (info == "Categories of Abuse")
+            {
+
+            }
+
+
+                if ((info == "HSAB SAFA Prompts") || (string.IsNullOrEmpty(info)))
             {
                 htmlSource.Html = header_string + "<textblock><b id='bb'>Additional Information</b>  <p>        Copyright <b id='bb'>HSAB and HBL ICT Services</b>. The following staff developed this app:<center> <br/><br/>Tracy Cooper <br/> Jane Newcombe <br/> Neil Wallace <br/> Michael Lamb <br/> Caroline Raut <br/><br/><p> </center> The responsible officers for this app are: <p> <b id='bb'>Caroline.Aitken@hertfordshire.gov.uk</b> or<b id='bb'> Loraine.Waterworth@hertfordshire.gov.uk</b></textblock></body></html>";
               }
+
+            if (info == "Domestic")
+            {
+                htmlSource.Html = header_string + @" <body>
+
+<p> In 2013, the Home Office made changes to the definition of <b id = 'bb'> Domestic Abuse </b> to include:
+
+<br/>· <b id = 'bb'> Incidents </b> of controlling, coercive or threatening behaviour, violence or abuse by someone who is or has been an intimate partner or family member(regardless of gender or sexuality)
+          <br/>· Domestic abuse also includes honour based violence, Female Genital Mutilation and forced marriage.
+<br/>· Local Domestic abuse resources and helplines: < b id = 'bb' > www.HertsSunflower.org </b>
+   
+
+
+   <p> Tel: <b id = 'bb'> 08 088 088 088 </b> or offer to refer to Independent Domestic Violence Advisor.";
+
+};
+            if ((info == "Financial"))
+            {
+                htmlSource.Html = header_string + @" <body>
+<h3 id='bb'> Financial Abuse </h3>
+<p>Potential indicators of <b id='bb'>Financial Abuse</b> include:
+<br/>· Change in living conditions
+<br/>· Lack of heating, clothing or food
+<br/>· Inability to pay bills/unexplained shortage of money
+<br/>· Unexplained  withdrawals from an account
+<br/>· Unexplained loss/misplacement of financial documents
+<br/>· The recent addition of authorised signers on a client or donor’s signature card
+<br/>· Sudden or unexplained changes in a will or other financial documents
+
+";
+            };
+
+                if ((info == "Sexual")||(info == "Modern Slavery"))
+            {
+                htmlSource.Html = header_string + @" <body>
+<b id='bb'> Sexual Abuse and Modern Slavery </b>
+            <p><b id = 'bb'> Sexual exploitation </b> could be considered under Sexual abuse or Modern Slavery.";
+};
+
+
+            if (info == "Domestic")
+            {
+                htmlSource.Html = header_string + @" <body>
+<b id='bb'> Domestic Abuse </b>
+<p> In 2013, the Home Office made changes to the definition of <b id = 'bb'> Domestic Abuse </b> to include:
+
+<br/>· <b id = 'bb' > Incidents </b> of controlling, coercive or threatening behaviour, violence or abuse by someone who is or has been an intimate partner or family member(regardless of gender or sexuality)
+          <br/>· Domestic abuse also includes honour based violence, Female Genital Mutilation and forced marriage.
+<br/>· Local Domestic abuse resources and helplines: <b id = 'bb' > www.HertsSunflower.org </b>
+   
+
+
+   <p> Tel: <b id = 'bb' > 08 088 088 088 </b> or offer to refer to Independent Domestic Violence Advisor.";
+
+            };
+
+
+
+
+
             if (info == "Categories of Abuse")
             {
                 htmlSource.Html =header_string +  @" <body>
@@ -179,7 +240,7 @@ margin:15px;
                 htmlSource.Html = header_string + @"<p><h2 id='bb'>Definition of an Adult at Risk</p></h2>
 <b id='bb'>The Care Act (2014)</b>
 <p>Implemented in April 2015 and the biggest change to social care policy in the last 30 years. Safeguarding duties apply to an adult who:
-<br/><p>• Has needs for care and support (whether or not the local authority is meeting any of those needs.
+<br/><p>• Has needs for care and support (whether or not the local authority is meeting any of those needs).
 <br/><p>• Is experiencing, or at risk of, abuse or neglect; <b id='bb'>and</b>
 <br/><p>• As a result of the those care and support needs is unable to protect themselves from the risk of, or the experience of abuse or neglect.
 
@@ -208,7 +269,7 @@ margin:15px;
 </body>
 </html>"; }
             
-if (info == "Recognizing Abuse")
+if (info == "Recognising Abuse")
                 {
                     htmlSource.Html = header_string + @"<p><h2 id='bb'>Recognizing Abuse</p></h2>
 

@@ -18,18 +18,13 @@ namespace HSAB.SAFA
     public class definition : ContentPage
     {
 
-        Button home;
-        Button back;
+         Button back;
 
-        private string sp;
-        private string t;
-        private string yesnext;
-        private string nonext;
-        String _BGColor;
-
+        
 
         void OnyesButtonClicked(object sender, EventArgs e)
         {
+          
             var tg = new What_Is_Safeguarding("What is Safeguarding?");
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
         }

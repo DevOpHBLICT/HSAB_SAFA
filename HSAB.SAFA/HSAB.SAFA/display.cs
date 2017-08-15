@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
+
 
 using System.Text;
 
@@ -18,8 +18,7 @@ namespace HSAB.SAFA
     public class d : ContentPage
     {
 
-        Button home;
-        Button back;
+         Button back;
 
         private string sp;
         private string t;
@@ -88,9 +87,9 @@ namespace HSAB.SAFA
                 pages.Add(new Pages {title="Recognising abuse", description = "<b>Risk<b/> <br/> is not in itself a safeguarding issue, as not all risks will result in a negative impact on the individual. <b>Frequency<b/> <p> Abuse may be an isolated incidentor multiple, affecting one or more people. <b>Harm<b/> <p> Harm should be taken to include not only ill treatment but also the impairment of, or avoidable deterioration in, physical or mental health and the impairement of physical, intellectual, emotional, social or behavioural development. ", id="14", yesbutton = "1", nobutton = "1", yesnext = "50", nonext = "16" });
                 pages.Add(new Pages { title = "Recognising abuse", description = "You may notice signs that someone is being abused. <p><b>Personal hygiene</b> They may not take as much care as normal with their appearance, such as not bathing, shaving or washing their hair. Behaviour. They may become withdrawn, depressed or tearful. They may also be angry or aggressive for little reason. They may have unexplained or frequent injuries. They may stop going out, not having any money to buy food or access leisure services, not want to be left alone with certain people, or lose their appetite. ", id = "50"});
                 pages.Add(new Pages {title="Reporting a concern", description = "<h3 style='color:#953735'>Reporting a concern</h3> <p><b> The safeguarding concern may be disclosed, witnessed or suspected.</b><p color:'#Ad1D73'> It is your duty under the Care Act (2014) to comply with the following 4 step process:</p><p><b style='color:#953735' > 1. Assess the risk</b><p> If the person is in immediate danger and a crime has been committed contact the <b style='color:#953735' >Police</b> on <b style='color:#953735' >999</b> or <b style='color:#953735'>101</b> if there is no immediate risk.", id = "17", yesbutton = "1", nobutton = "1", yesnext = "18" });
-                pages.Add(new Pages { title = "Reporting a concern", description = "<p style='color:#953735'><b style='color:#953735' >2. Complete the HSAB Safeguarding Adult concern form.</b></p> <p> The alerter must raise a safeguarding concern to the <b style='color:#953735'>Local Authority</b> (Health and Community Services) on 0300 123 4042 and follow up in writing using the Safeguarding Adult concern form.", id = "18", yesbutton = "1", yesnext = "19" ,nobutton="1"});
+                pages.Add(new Pages { title = "Reporting a concern", description = "<p style='color:#953735'><b style='color:#953735' >2. Complete the HSAB Safeguarding Adult concern form.</b></p> <p> The alerter must raise a safeguarding concern to the <b style='color:#953735'>Local Authority</b> (Health and Community Services) on 0300 123 4042 and follow up in writing using the Safeguarding Adult concern form. ", id = "18", yesbutton = "1", yesnext = "19" ,nobutton="1"});
                 pages.Add(new Pages { title = "Reporting a concern", description = "<p style='color:#953735'><b>3. Mental Health considerations</b> </p><p> If the person is under 65 and receiving Mental Health Services, any safeguarding concerns should be raised directly to Hertfordshire Partnership Foundation NHS Trust on <b style='color:#953735'> 0300 7770707</b>.", id = "19",yesbutton="1",yesnext="20",nobutton="2" });
-                pages.Add(new Pages { title = "Reporting a concern", description = "<b style='color:#953735' >4. Remember to:</b> <p> Make a clear, concise, factual referral so that the person receiving the form understand the key issues. <p>Follow your own agency's Safeguarding Policy and the HSAB Safeguarding Adults Policy. <p> Make a referral to Safeguarding Children where necessary: Safeguarding Children referral form. <p><b style='color:#953735'>You are accountable for what you do and what you choose not to do.</b>", id = "20", nobutton = "0", yesbutton = "9", yesnext = "22" });
+                pages.Add(new Pages { title = "Reporting a concern", description = "<b style='color:#953735' >4. Remember to:</b> <p> Make a clear, concise, factual referral so that the person receiving the form understand the key issues. <p>Follow your own agency's Safeguarding Policy and the HSAB Safeguarding Adults Policy. <p> Make a referral to Safeguarding Children where necessary: Safeguarding Children referral form. This can be found by searching using the phrase Hertfordshire Safeguaring Adults Board Concern form. This form must only be populated on secure portal. <p><b style='color:#953735'>You are accountable for what you do and what you choose not to do.</b>", id = "20", nobutton = "0", yesbutton = "9", yesnext = "22" });
                 pages.Add(new Pages {title="Making Safeguarding Personal", description = "<div style='padding:5px 5px 5px 5px;background-color:#731351; color: white; vertical-align: middle; padding: 10px 10px 10px 10px; '> Making safeguarding personal is a shift in culture and professional practice.</div><br/><div style='background-color:#7D4D68; color: white; vertical-align: middle; padding: 10px 10px 10px 10px; '><br/> It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety.</div><br/><div style='background-color:#7030A0; color: white; vertical-align: middle; padding: 10px 10px 10px 10px; '> It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process.</div><br/><div style='background-color:#731351; color: white; vertical-align: middle; padding: 10px 10px 10px 10px; '> It is about seeing people as experts in thie own lives and working alongside them.</div><br/><div style='background-color:#7D4D68; color: white; vertical-align: middle; padding: 10px 10px 10px 10px; '> The alerter must note the person's wishes but still has a duty to raise any safeguarding concerns that are disclosed, witnessed or suspected to the Local Authority.</div>", id = "21" });
 
             BackgroundColor = Color.White;
@@ -102,7 +101,19 @@ namespace HSAB.SAFA
                 {
                     if (p.id == startpage)
                     {
-                        yesnext = p.yesnext;
+                    if (startpage == "3") { App.app_title = "Physical"; };
+                    if (startpage == "4") { App.app_title = "Domestic"; };
+                    if (startpage == "5") { App.app_title = "Sexual"; };
+                    if (startpage == "6") { App.app_title = "Psychological"; };
+                    if (startpage == "7") { App.app_title = "Financial"; };
+                    if (startpage == "8") { App.app_title = "Modern Slavery"; };
+                    if (startpage == "9") { App.app_title = "Discriminatory"; };
+                    if (startpage == "10") { App.app_title = "Organisational"; };
+                    if (startpage == "11") { App.app_title = "Neglect"; };
+                    if (startpage == "12") { App.app_title = "Self-Neglect"; };
+
+
+                    yesnext = p.yesnext;
                         nonext = p.nonext;
                         yesenabled = p.yesbutton;
                         noenabled = p.nobutton;

@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>HSAB.SAFA.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>HSABSAFAiOS</AssemblyName>
+    <AssemblyName>HSAB.SAFA.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -36,25 +36,6 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution: Neil wallace (L4324945KU)</CodesignKey>
-    <CodesignProvision>a4d3aacd-4c20-423e-9c39-dc6ba0a7079a</CodesignProvision>
-    <CodesignEntitlements />
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
-    <BuildIpa>True</BuildIpa>
-    <IpaIncludeArtwork>False</IpaIncludeArtwork>
-    <MtouchSdkVersion>9.3</MtouchSdkVersion>
-    <MtouchDebug>True</MtouchDebug>
-    <MtouchProfiling>False</MtouchProfiling>
-    <MtouchFastDev>False</MtouchFastDev>
-    <MtouchUseLlvm>False</MtouchUseLlvm>
-    <MtouchUseThumb>False</MtouchUseThumb>
-    <MtouchUseSGen>False</MtouchUseSGen>
-    <MtouchUseRefCounting>False</MtouchUseRefCounting>
-    <OptimizePNGs>True</OptimizePNGs>
-    <MtouchFloat32>False</MtouchFloat32>
-    <MtouchI18n />
-    <IpaPackageName>ipa</IpaPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,13 +47,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignKey>iPhone Distribution: Neil wallace (L4324945KU)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>
-    </CodesignProvision>
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -82,26 +59,8 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution: Neil wallace (L4324945KU)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchSdkVersion>9.3</MtouchSdkVersion>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchDebug>True</MtouchDebug>
-    <MtouchProfiling>False</MtouchProfiling>
-    <MtouchFastDev>False</MtouchFastDev>
-    <MtouchUseLlvm>False</MtouchUseLlvm>
-    <MtouchUseThumb>False</MtouchUseThumb>
-    <MtouchUseSGen>False</MtouchUseSGen>
-    <MtouchUseRefCounting>False</MtouchUseRefCounting>
-    <OptimizePNGs>True</OptimizePNGs>
-    <MtouchFloat32>False</MtouchFloat32>
-    <DeviceSpecificBuild>False</DeviceSpecificBuild>
-    <MtouchI18n />
-    <CodesignProvision>a4d3aacd-4c20-423e-9c39-dc6ba0a7079a</CodesignProvision>
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
-    <BuildIpa>True</BuildIpa>
-    <IpaIncludeArtwork>False</IpaIncludeArtwork>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -124,18 +83,11 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignProvision>a4d3aacd-4c20-423e-9c39-dc6ba0a7079a</CodesignProvision>
-    <CodesignKey>iPhone Distribution: Neil wallace (L4324945KU)</CodesignKey>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
-    <BuildIpa>True</BuildIpa>
-    <IpaIncludeArtwork>False</IpaIncludeArtwork>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaseUrl_IOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -180,102 +132,6 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow26.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Arrow4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Behavior.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\cross.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Flag6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\hbl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\home2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\HSAB.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\info.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\info2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Injuries.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Lifestyle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Page1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Page2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\tick.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\P.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Resources\local.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Resources\default.css" />
   </ItemGroup>
   <Import Project="..\HSAB.SAFA\HSAB.SAFA.projitems" Label="Shared" Condition="Exists('..\HSAB.SAFA\HSAB.SAFA.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

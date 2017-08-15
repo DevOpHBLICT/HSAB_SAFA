@@ -16,9 +16,14 @@ namespace HSAB.SAFA
 
     public class What_Is_Safeguarding : ContentPage
     {
-     
 
-       
+        void OnyesButtonClicked(object sender, EventArgs e)
+        {
+            var tg = new Categories_Abuse();
+            Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
+        }
+
+
 
 
         public void refresh()
@@ -26,7 +31,6 @@ namespace HSAB.SAFA
             //         listView.ItemsSource = _database.GetContents();
         }
 
- 
 
         public What_Is_Safeguarding(String Titles)
         {
@@ -41,10 +45,7 @@ namespace HSAB.SAFA
             //  BackgroundColor = Color.FromHex("#e6b9b8");
 
 
-            if (Device.OS == TargetPlatform.Windows)
-            { 
-                NavigationPage.SetHasNavigationBar(this, false);
-            }
+           
 
                 BackgroundColor = Color.White;
 
@@ -63,48 +64,11 @@ namespace HSAB.SAFA
             //  BackgroundImage = "people.jpg";
 
 
-            Button Physical_Abuse = new RoundedCornersButton { Text = "protecting an adult's right to live in safety, free from abuse and neglect.", BackgroundColor = Color.Transparent, BorderColor = Color.FromHex("#7D4D68"), BorderWidth = 5, TextColor = Color.FromHex("#7D4D68"), VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand,HeightRequest=200, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) };
-
-
-
-
-
-                    Button Domestic_Abuse = new RoundedCornersButton { Text = "Stop abuse or neglect where possible.", BackgroundColor = Color.Transparent, BorderColor = Color.FromHex("0d3893"), BorderWidth = 5, TextColor = Color.FromHex("0d3893"), VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, HeightRequest = 200, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) };
-
-
-
-
-                 Button Sexual_Abuse = new RoundedCornersButton { Text = "Prevent harm and reduce the risk of abuse or neglect in a way that supports them in making choices and having control about how they want to live.", BackgroundColor = Color.Transparent, BorderWidth = 5, BorderColor = Color.FromHex("#C0504D"), TextColor = Color.FromHex("#C0504D"), HeightRequest = 200, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) };
-
-
-
-                   Button Psychological_Abuse = new RoundedCornersButton { Text = "Raise public awareness to enable communities as a whole, together with professionals, help to prevent, identify and respond to abuse and neglect.", BackgroundColor = Color.Transparent, BorderColor = Color.FromHex("#9BBB59"), BorderWidth = 5, TextColor = Color.FromHex("#9BBB59"), HeightRequest = 200, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) };
-           
-             
-            var grid = new Grid
-            { 
-             
-            };
-
-            Label l = new Label { Text = "Safeguarding means:" };
-          ;
-            grid.Children.Add(Physical_Abuse, 0, 1); // Left, First element 
-            grid.Children.Add(Domestic_Abuse, 1, 1); // Right, First element 
-            grid.Children.Add(Sexual_Abuse, 0, 2); // Left, Second element 
-            grid.Children.Add(Psychological_Abuse, 1, 2); // Right, Second element 
           
 
-
-            if (Device.OS == TargetPlatform.Windows)
-            {
-               Physical_Abuse.HeightRequest = 90;
-               Domestic_Abuse.HeightRequest = 90;
-               Sexual_Abuse.HeightRequest = 90;
-                Psychological_Abuse.HeightRequest = 90;
-                     }
             var browser = new BaseUrlWebView(); // temporarily use this so we can custom-render in iOS 
             var htmlSource = new HtmlWebViewSource();
-            browser.HeightRequest = 400;
+            browser.HeightRequest = 420;
             htmlSource.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
             browser.Source = htmlSource;
 
@@ -129,14 +93,14 @@ color:#878787;
 }
 body
 {
-margin:20px;
+margin:5px;
 }
 }
 </style>
 <meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
  <body>
-<img src='P.png' height='100px'/>
+<img src='P.png' height='80px'/>
 <p><h2><b id ='bb'>Safeguarding means:</b></h2></p>
 <p><b id='bb'>Protecting </b> an adult's right to live in safety, free from abuse and neglect.</div>
 
@@ -149,11 +113,25 @@ margin:20px;
   </body>
 </html>";
 
+            Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "Categories of Abuse", IsVisible = true, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
+            yes.Clicked += OnyesButtonClicked;
+            yes.HeightRequest = 70;
+
+            var x = new StackLayout
+            {
+
+                Padding = new Thickness(3, 3, 3, 3),
+                Children = {
+                    browser,   
+                    yes,
+                }
+            };
 
 
+            Content = new ScrollView { Content = x };
 
-            Content = browser;
 
-        }
+         
+        } 
     }
 }

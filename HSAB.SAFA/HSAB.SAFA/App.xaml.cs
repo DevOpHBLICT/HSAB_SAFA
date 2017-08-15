@@ -22,6 +22,7 @@ namespace HSAB.SAFA
 			InitializeComponent();
 
             NavPage = new NavigationPage(new Contents());
+            
             if (Device.OS != TargetPlatform.Windows)
             {
 
@@ -43,7 +44,7 @@ namespace HSAB.SAFA
                         ) 
                 
                 });
-
+                
                 App.NavPage.ToolbarItems.Add(new ToolbarItem
                 {
 

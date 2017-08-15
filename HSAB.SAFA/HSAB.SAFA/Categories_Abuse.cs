@@ -15,9 +15,7 @@ namespace HSAB.SAFA
 
     public class Categories_Abuse : ContentPage
     {
-        private ListView listView;
-        private ListView _pharmacylist;
-
+    
 
 
         public class GetFrontPage
@@ -168,16 +166,16 @@ namespace HSAB.SAFA
 
 
 
-            Button Physical_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Physical", VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Domestic_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Domestic", VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Sexual_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Sexual", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Psychological_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Psychological", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Financial_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Financial/Material", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Modern_Slavery = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Modern Slavery", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Discriminatory_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Discriminatory", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Organisational_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Organisational", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Neglect_Abuse = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Neglect and acts of omission", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
-            Button Self_Neglect = new RoundedCornersButton { BackgroundColor = Color.Transparent, BorderWidth = 2, Text = "Self-neglect", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Physical_Abuse = new RoundedCornersButton {TextColor=Color.White, BackgroundColor = Color.FromHex("#953735"), BorderWidth = 2, Text = "Physical", VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Domestic_Abuse = new RoundedCornersButton {TextColor= Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#d99694"), BorderWidth = 2, Text = "Domestic", VerticalOptions = LayoutOptions.FillAndExpand, HorizontalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Sexual_Abuse = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#e6b9b8"), BorderWidth = 2, Text = "Sexual", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Psychological_Abuse = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#bfbfbf"), BorderWidth = 2, Text = "Psychological", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Financial_Abuse = new RoundedCornersButton { TextColor = Color.White, BackgroundColor = Color.FromHex("#953735"), BorderWidth = 2, Text = "Financial/Material", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Modern_Slavery = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#d99694"), BorderWidth = 2, Text = "Modern Slavery", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Discriminatory_Abuse = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#e6b9b8"), BorderWidth = 2, Text = "Discriminatory", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Organisational_Abuse = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#bfbfbf"), BorderWidth = 2, Text = "Organisational", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Neglect_Abuse = new RoundedCornersButton {TextColor=Color.White, BackgroundColor = Color.FromHex("#953735"), BorderWidth = 2, Text = "Neglect and acts of omission", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
+            Button Self_Neglect = new RoundedCornersButton { TextColor = Color.FromHex("#953735"), BackgroundColor = Color.FromHex("#d99694"), BorderWidth = 2, Text = "Self-neglect", HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
 
             var grid = new Grid
             {
@@ -216,48 +214,8 @@ namespace HSAB.SAFA
             Self_Neglect.Clicked += Self_Neglect_Abuse_Clicked;
 
 
-
-
-            _pharmacylist = new ListView
-            {
-
-                SeparatorColor = Color.FromHex("#ddd"),
-            };
-            _pharmacylist.ItemsSource = data;
-            var cell = new DataTemplate(typeof(ImageCell));
-            cell.SetValue(TextCell.TextColorProperty, Color.FromHex("a50100"));
-
-
-            cell.SetBinding(TextCell.TextProperty, "Name");
-            cell.SetBinding(ImageCell.ImageSourceProperty, "Image");
-            _pharmacylist.ItemTemplate = cell;
-            // _pharmacylist.ItemTemplate = new DataTemplate(typeof(ImageCell));
-            // _pharmacylist.ItemTemplate.SetBinding(ImageCell.TextProperty, "Name");
-            // _pharmacylist.ItemTemplate.SetBinding(ImageCell.ImageSourceProperty, "Image");
-            // _pharmacylist.SetValue(TextCell.TextColorProperty, Color.White);
-            //  _pharmacylist.HeightRequest = 500;
-            _pharmacylist.RowHeight = 40;
-
-            var a = new StackLayout
-            {
-                Orientation = StackOrientation.Vertical,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
-
-                //  Padding = new Thickness (5, 5, 5, 5), 
-            };
-
-            var s = new Label { HorizontalTextAlignment = Xamarin.Forms.TextAlignment.Center, Text = "Hertfordshire Primary Care", TextColor = Color.FromHex("1760ae"), Font = Font.SystemFontOfSize(20, FontAttributes.Bold) };
-
-
-
-   
-
-            if (Device.OS == TargetPlatform.Windows)
-            {
-
-                 NavigationPage.SetHasNavigationBar(this, false);
-            }
-         
+            
+            
 
 
             var logo = new StackLayout
@@ -295,7 +253,19 @@ namespace HSAB.SAFA
                 Padding = 5,
                 //  BackgroundColor = Color.White,
                 Children = {
-                   i, _pharmacylist,logo
+                   i,
+                   
+                         Physical_Abuse,
+            Domestic_Abuse,
+            Sexual_Abuse,
+            Psychological_Abuse,
+            Financial_Abuse,
+            Modern_Slavery,
+            Discriminatory_Abuse,
+            Organisational_Abuse,
+            Neglect_Abuse,
+            Self_Neglect,
+            logo
 
                 }
             };
@@ -303,84 +273,6 @@ namespace HSAB.SAFA
             Content = k;
 
 
-            var tt = "";
-
-
-
-            _pharmacylist.ItemSelected += (sender, e) =>
-            {
-
-
-                if (e.SelectedItem == null) return;
-                var user = (GetFrontPage)e.SelectedItem;
-                if (user.Name == "Physical abuse")
-                {
-                    App.app_title = "Physical Abuse";
-                    var tg = new d("3", "Physical Abuse", "#953735");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "Domestic abuse")
-                {
-                    App.app_title = "Domestic Abuse";
-                    var tg = new d("4", "Domestic Abuse", "#d99694");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-
-                }
-                if (user.Name == "Sexual abuse")
-                {
-                    App.app_title = "Sexual Abuse";
-                    var tg = new d("5", "Sexual Abuse", "#e6b9b8"); ;
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "Psychological abuse")
-                {
-                    App.app_title = "Psychological Abuse";
-                    var tg = new d("6", "Psychological Abuse", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-
-
-                if (user.Name == "Modern Slavery")
-                {
-                    App.app_title = "Modern Slavery";
-                    var tg = new d("8", "Modern Slavery", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-                if (user.Name == "Discriminatory abuse")
-                {
-                    App.app_title = "Discriminatory Abuse";
-                    var tg = new d("9", "Discriminatory Abuse", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-
-                if (user.Name == "Organisational abuse")
-                {
-                    App.app_title = "Organisational Abuse";
-                    var tg = new d("10", "Organisational Abuse", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-
-                }
-
-                if (user.Name == "Neglect and acts of omission")
-                {
-                    App.app_title = "Neglect and acts of omission";
-                    var tg = new d("11", "Neglect and acts of omission", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-
-                }
-                if (user.Name == "Self Neglect")
-                {
-
-                    App.app_title = "Self Neglect";
-                    var tg = new d("12", "Self Neglect", "#bfbfbf");
-                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
-                }
-
-                if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
-                                                    // do something with e.SelectedItem
-                ((ListView)sender).SelectedItem = null; // de-select the row
-
-            };
-        }
+                   }
     }
 }

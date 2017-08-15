@@ -17,7 +17,6 @@ namespace HSAB.SAFA
 
     public class Contents : ContentPage
     {
-        private ListView listView;
         private ListView _pharmacylist;
 
 
@@ -73,6 +72,11 @@ namespace HSAB.SAFA
         }
 
 
+        public class VC : ViewCell
+        {
+            public VC()
+            { }
+        }
 
         public Contents()
         {
@@ -91,8 +95,7 @@ namespace HSAB.SAFA
             Title = "HSAB SAFA Prompts";
             BackgroundColor = Color.FromHex("FCDED4");
             
-            Label title = null;
-
+         
             //  BackgroundColor = Color.FromHex("#e6b9b8");
 
 
@@ -111,12 +114,12 @@ namespace HSAB.SAFA
             new GetFrontPage("Definition of an Adult at Risk", "Flag1.png"),
                 new GetFrontPage("What is Safeguarding?", "Flag2.png"),
                    new GetFrontPage("Categories of Abuse", "Flag3.png"),
-               new GetFrontPage("Recognizing Abuse", "Flag4.png"),
+               new GetFrontPage("Recognising Abuse", "Flag4.png"),
                  new GetFrontPage("Reporting a Concern", "Flag5.png"),
                  new GetFrontPage("Making Safeguarding Personal", "Flag6.png"),
 
             };
-
+           
             _pharmacylist = new ListView
             {
 
@@ -125,19 +128,16 @@ namespace HSAB.SAFA
             _pharmacylist.ItemsSource = data;
             var cell = new DataTemplate(typeof(ImageCell));
             cell.SetValue(TextCell.TextColorProperty, Color.FromHex("a50100"));
-          
+            _pharmacylist.HasUnevenRows = true;
 
             cell.SetBinding(TextCell.TextProperty, "Name");
             cell.SetBinding(ImageCell.ImageSourceProperty, "Image");
-      
+                              
             _pharmacylist.ItemTemplate = cell;
-            // _pharmacylist.ItemTemplate = new DataTemplate(typeof(ImageCell));
-            // _pharmacylist.ItemTemplate.SetBinding(ImageCell.TextProperty, "Name");
-            // _pharmacylist.ItemTemplate.SetBinding(ImageCell.ImageSourceProperty, "Image");
-            // _pharmacylist.SetValue(TextCell.TextColorProperty, Color.White);
-            //  _pharmacylist.HeightRequest = 500;
-            _pharmacylist.RowHeight = 60;
+               _pharmacylist.RowHeight = 60;
+               
 
+           
             var a = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
@@ -163,13 +163,7 @@ namespace HSAB.SAFA
             }
 
 
-
-            //   var p = new StackLayout
-            //   {
-            //       Padding = 5,
-            //       Children = { title }
-            //   };
-
+            
 
 
             var logo = new StackLayout
@@ -235,6 +229,7 @@ namespace HSAB.SAFA
                 {
                     App.app_title = "What is Safeguarding?";
                     var tg = new What_Is_Safeguarding(App.app_title);
+               
                     Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
 
                 }
@@ -244,10 +239,10 @@ namespace HSAB.SAFA
                     var tg = new Categories_Abuse();
                     Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
                 }
-                if (user.Name == "Recognizing Abuse")
+                if (user.Name == "Recognising Abuse")
                 {
-                    App.app_title = "Recognizing Abuse";
-                    var tg = new Recognizing_Abuse();
+                    App.app_title = "Recognising Abuse";
+                    var tg = new Recognising_Abuse();
                     Xamarin.Forms.Device.BeginInvokeOnMainThread(() => Navigation.PushAsync(tg));
                 }
 

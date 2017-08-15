@@ -15,11 +15,9 @@ namespace HSAB.SAFA
 
 
 
-    public class Recognizing_Abuse2 : ContentPage
+    public class Recognising_Abuse2 : ContentPage
     {
-        private ListView listView;
-        private ListView _pharmacylist;
-
+       
 
         void OnyesButtonClicked(object sender, EventArgs e)
         {
@@ -55,16 +53,15 @@ namespace HSAB.SAFA
 
 
 
-        public Recognizing_Abuse2()
+        public Recognising_Abuse2()
         {
 
         
-            App.app_title = "Recognizing Abuse";
-            Title = "Recognizing Abuse";
+            App.app_title = "Recognising Abuse";
+            Title = "Recognising Abuse";
             BackgroundColor = Color.White;
 
-            Label title = null;
-
+          
             //  BackgroundColor = Color.FromHex("#e6b9b8");
 
 
@@ -74,20 +71,6 @@ namespace HSAB.SAFA
             }
 
             BackgroundColor = Color.White;
-
-
-
-
-            var data = new List<GetFrontPage2>  {
-
-            new GetFrontPage2("They may not take as much care as normal with their appearance, such as not bathing, shaving or washing their hair", "Hygine.png"),
-                new GetFrontPage2("They may become  withdrawn, depressed or tearful. They may also be angry or aggressive for little reason.", "Behaviour.png"),
-                   new GetFrontPage2("They may have unexplained or frequent injuries.", "Injuries.png"),
-    new GetFrontPage2("They may stop going out, not  have any money to buy food or access leisure services, not want to be left alone with certain people or lose their appetite", "Lifestyle.png"),
-
-
-            };
-
                   
             Button yes = new Button { FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Label)), Text = "Suspected", IsVisible = true, Image = "tick", BackgroundColor = Color.FromHex("#953735"), TextColor = Color.White };
             yes.Clicked += OnyesButtonClicked;
@@ -131,7 +114,7 @@ margin:20px;
                  </head> 
  <body>
 
-<h2><b id ='bb'>Hygiene</b></h2>They may not take as much care as normal with their appearance, such as not bathing, shaving or washing their hair.
+<h2><b id ='bb'>Personal Hygiene</b></h2>They may not take as much care as normal with their appearance, such as not bathing, shaving or washing their hair.
 <h2><b id='bb'>Behaviour</b></h2>They may become  withdrawn, depressed or tearful. They may also be angry or aggressive for little reason.
 <h2><b id='bb'>Injuries</b></h2> They may have unexplained or frequent injuries.
 <h2><b id='bb'>Lifestyle</b></h2> They may stop going out, not  have any money to buy food or access leisure services, not want to be left alone with certain people or lose their appetite.
