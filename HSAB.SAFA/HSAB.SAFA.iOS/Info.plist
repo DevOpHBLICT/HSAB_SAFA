@@ -7,9 +7,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>HBLSafeAdults</string>
 	<key>CFBundleShortVersionString</key>
-	<string>62</string>
+	<string>63</string>
 	<key>CFBundleVersion</key>
-	<string>8.1</string>
+	<string>8.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -31,6 +31,9 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x.png</string>
+		<string>Default.png</string>
+		<string>Default@2x.png</string>
+		<string>Default-568h@2x.png</string>
 	</array>
 </dict>
 </plist>
