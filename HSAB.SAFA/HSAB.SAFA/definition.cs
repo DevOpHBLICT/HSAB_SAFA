@@ -69,7 +69,8 @@ namespace HSAB.SAFA
  <head> 
 <style>
 *{
-color:#878787;
+font-family:'HelveticaNeue-Light','Helvetica','Arial';
+color:#595959;
 }
 .box {
 
@@ -117,11 +118,14 @@ body
 margin:10px;
 }
 </style>
-<meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
+<meta name='viewport' content='width =device-width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
  <body> 
 <p><h2 id='bb'>Definition of an adult at risk</h2>
-<img src='P.png' height='90px'/>
+<div align='center'>
+<img src='old_man.png' height='150px' border='2' border-color='red' />
+
+</div>
 <p>According to The Care Act (2014), an adult at risk is a person who:  
  
 <p>Has care and support needs, whether or not the Local Authority e.g. Hertfordshire County Council (HCC) is meeting any of those needs <b>And</b>;

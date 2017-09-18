@@ -99,7 +99,8 @@ color:#923b3d !important;
 
 html, body { height: 80%; padding: 0; margin: 0; }
 *{
-color:#878787;
+font-family:'HelveticaNeue-Light','Helvetica','Arial';
+color:#595959;
 }
 body
 {

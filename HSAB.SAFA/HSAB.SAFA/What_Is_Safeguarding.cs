@@ -89,18 +89,22 @@ color:#923b3d !important;
 
 html, body { height: 80%; padding: 0; margin: 0; }
 *{
-color:#878787;
+color:#595959;
+
+font-family:'HelveticaNeue-Light','Helvetica','Arial';
 }
 body
 {
 margin:5px;
 }
-}
+
 </style>
 <meta name='viewport' content='width =device -width, initial-scale = 1.0, maximum-scale = 1.0'>
                  </head> 
  <body>
-<img src='P.png' height='80px'/>
+<div align='center'>
+<img src='v1.png' height='80px' />
+</div>
 <p><h2><b id ='bb'>Safeguarding means:</b></h2></p>
 <p><b id='bb'>Protecting </b> an adult's right to live in safety, free from abuse and neglect.</div>
 

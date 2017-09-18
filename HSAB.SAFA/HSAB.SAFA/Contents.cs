@@ -187,14 +187,14 @@ namespace HSAB.SAFA
             };
             var i = new Image
             {
-
+               
                 //     BackgroundColor =Color.White,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                HeightRequest = 90,
+                HeightRequest = 150,
                 //   WidthRequest=90,
                 //               Aspect = Aspect.AspectFit,//.AspectFit//.Fill  
-                Source = ImageSource.FromFile("Page1.png")
+                Source = ImageSource.FromFile("ab1.png")
             };
             var k = new StackLayout
             {

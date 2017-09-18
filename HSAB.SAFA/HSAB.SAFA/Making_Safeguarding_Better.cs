@@ -90,9 +90,27 @@ htmlSource.Html = @"<html>
             htmlSource.Html = @"<html> 
  <head> 
  <link rel=""stylesheet"" href=""default.css""> 
+<style>
+*
+{
+font-family:'HelveticaNeue-Light','Helvetica','Arial';
+}
+#triangle-right {
+  width: 0; 
+  height: 0; 
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  
+  border-left: 15px solid #FCDED4;
+}
+</style>
  </head> 
  <body> 
 <h3 style='color:#953735'>Making Safeguarding Personal </h3>
+
+<div align='center'>
+<img src='front_p.png' height='180px' border='2' />
+</div>
 <table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td> Is a shift in culture and professional practice. </td></tr> 
 <table><tr><td style='vertical-align:top;margin-top:8px' > <div id='triangle-right'></div><td><td>It is about having conversations with people about how we might respond in safeguarding situations to enhance involvement, choice and control as well as improving quality of life, wellbeing & safety.  </td></tr>
 <table><tr><td style='vertical-align:top;margin-top:8px'> <div id='triangle-right'></div><td><td>It is about empowering the adult at risk to ensure that their wishes/ desired outcomes are considered as part of the safeguarding process. </td></tr>

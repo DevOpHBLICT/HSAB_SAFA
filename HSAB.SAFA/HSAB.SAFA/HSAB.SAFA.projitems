@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Categories_Abuse - Copy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Categories_Abuse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contents.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)definition.cs" />
@@ -37,5 +38,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Woman2.png" />
   </ItemGroup>
 </Project>

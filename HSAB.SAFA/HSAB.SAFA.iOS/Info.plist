@@ -5,11 +5,11 @@
 	<key>CFBundleDisplayName</key>
 	<string>HBL SAFA</string>
 	<key>CFBundleIdentifier</key>
-	<string>HBLSafeAdults</string>
+	<string>HertsSAFA</string>
 	<key>CFBundleShortVersionString</key>
-	<string>63</string>
+	<string>64</string>
 	<key>CFBundleVersion</key>
-	<string>8.2</string>
+	<string>8.3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -31,9 +31,6 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x.png</string>
-		<string>Default.png</string>
-		<string>Default@2x.png</string>
-		<string>Default-568h@2x.png</string>
 	</array>
 </dict>
 </plist>

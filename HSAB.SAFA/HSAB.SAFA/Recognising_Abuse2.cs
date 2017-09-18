@@ -91,7 +91,10 @@ namespace HSAB.SAFA
             htmlSource.Html = @"<html> 
  <head> 
 <style>
-
+*
+{
+font-family:'HelveticaNeue-Light','Helvetica','Arial';
+}
 #id
 {
 color:#923b3d !important;
@@ -102,7 +105,7 @@ color:#923b3d !important;
 
 html, body { height: 80%; padding: 0; margin: 0; }
 *{
-color:#878787;
+color:#595959;
 }
 body
 {
